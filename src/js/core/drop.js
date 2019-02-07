@@ -29,8 +29,8 @@ export default {
         delayHide: 800,
         clsDrop: false,
         hoverIdle: 200,
-        animation: ['uk-animation-fade'],
-        cls: 'uk-open'
+        animation: ['ui-animation-fade'],
+        cls: 'ui-open'
     },
 
     computed: {
@@ -40,7 +40,7 @@ export default {
         },
 
         clsDrop({clsDrop}) {
-            return clsDrop || `uk-${this.$options.name}`;
+            return clsDrop || `ui-${this.$options.name}`;
         },
 
         clsPos() {

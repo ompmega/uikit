@@ -1,13 +1,13 @@
 // Name:            Pagination
 // Description:     Component to create a page navigation
 //
-// Component:       `uk-pagination`
+// Component:       `ui-pagination`
 //
-// Adopted:         `uk-pagination-next`
-//                  `uk-pagination-previous`
+// Adopted:         `ui-pagination-next`
+//                  `ui-pagination-previous`
 //
-// States:          `uk-active`
-//                  `uk-disabled`
+// States:          `ui-active`
+//                  `ui-disabled`
 //
 // ========================================================================
 
@@ -34,7 +34,7 @@
  * 3. Reset list
  */
 
-.uk-pagination {
+.ui-pagination {
     display: flex;
     /* 1 */
     flex-wrap: wrap;
@@ -52,7 +52,7 @@
  * 3. Create position context for dropdowns
  */
 
-.uk-pagination > * {
+.ui-pagination > * {
     /* 1 */
     flex: none;
     /* 2 */
@@ -70,7 +70,7 @@
  * 2. Style
  */
 
-.uk-pagination > * > * {
+.ui-pagination > * > * {
     /* 1 */
     display: block;
     /* 2 */
@@ -79,21 +79,21 @@
 }
 
 /* Hover + Focus */
-.uk-pagination > * > :hover,
-.uk-pagination > * > :focus {
+.ui-pagination > * > :hover,
+.ui-pagination > * > :focus {
     color: @pagination-item-hover-color;
     text-decoration: @pagination-item-hover-text-decoration;
     .hook-pagination-item-hover;
 }
 
 /* Active */
-.uk-pagination > .uk-active > * {
+.ui-pagination > .ui-active > * {
     color: @pagination-item-active-color;
     .hook-pagination-item-active;
 }
 
 /* Disabled */
-.uk-pagination > .uk-disabled > * {
+.ui-pagination > .ui-disabled > * {
     color: @pagination-item-disabled-color;
     .hook-pagination-item-disabled;
 }
@@ -122,23 +122,23 @@
 
 .hook-inverse() {
 
-    .uk-pagination > * > * {
+    .ui-pagination > * > * {
         color: @inverse-pagination-item-color;
         .hook-inverse-pagination-item;
     }
 
-    .uk-pagination > * > :hover,
-    .uk-pagination > * > :focus {
+    .ui-pagination > * > :hover,
+    .ui-pagination > * > :focus {
         color: @inverse-pagination-item-hover-color;
         .hook-inverse-pagination-item-hover;
     }
 
-    .uk-pagination > .uk-active > * {
+    .ui-pagination > .ui-active > * {
         color: @inverse-pagination-item-active-color;
         .hook-inverse-pagination-item-active;
     }
 
-    .uk-pagination > .uk-disabled > * {
+    .ui-pagination > .ui-disabled > * {
         color: @inverse-pagination-item-disabled-color;
         .hook-inverse-pagination-item-disabled;
     }

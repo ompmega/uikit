@@ -25,7 +25,7 @@ export default function (UIkit) {
 
         let started = 0;
         on(document, 'animationstart', ({target}) => {
-            if ((css(target, 'animationName') || '').match(/^uk-.*(left|right)/)) {
+            if ((css(target, 'animationName') || '').match(/^ui-.*(left|right)/)) {
 
                 started++;
                 css(document.body, 'overflowX', 'hidden');

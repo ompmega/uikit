@@ -1,14 +1,14 @@
 // Name:            Tab
 // Description:     Component to create a tabbed navigation
 //
-// Component:       `uk-tab`
+// Component:       `ui-tab`
 //
-// Modifiers:       `uk-tab-bottom`
-//                  `uk-tab-left`
-//                  `uk-tab-right`
+// Modifiers:       `ui-tab-bottom`
+//                  `ui-tab-left`
+//                  `ui-tab-right`
 //
-// States:          `uk-active`
-//                  `uk-disabled`
+// States:          `ui-active`
+//                  `ui-disabled`
 //
 // ========================================================================
 
@@ -37,7 +37,7 @@
  * 3. Reset list
  */
 
-.uk-tab {
+.ui-tab {
     display: flex;
     /* 1 */
     flex-wrap: wrap;
@@ -55,7 +55,7 @@
  * 3. Create position context for dropdowns
  */
 
-.uk-tab > * {
+.ui-tab > * {
     /* 1 */
     flex: none;
     /* 2 */
@@ -74,7 +74,7 @@
  * 2. Style
  */
 
-.uk-tab > * > a {
+.ui-tab > * > a {
     /* 1 */
     display: block;
     text-align: center;
@@ -85,21 +85,21 @@
 }
 
 /* Hover + Focus */
-.uk-tab > * > a:hover,
-.uk-tab > * > a:focus {
+.ui-tab > * > a:hover,
+.ui-tab > * > a:focus {
     color: @tab-item-hover-color;
     text-decoration: @tab-item-hover-text-decoration;
     .hook-tab-item-hover;
 }
 
 /* Active */
-.uk-tab > .uk-active > a {
+.ui-tab > .ui-active > a {
     color: @tab-item-active-color;
     .hook-tab-item-active;
 }
 
 /* Disabled */
-.uk-tab > .uk-disabled > a {
+.ui-tab > .ui-disabled > a {
     color: @tab-item-disabled-color;
     .hook-tab-item-disabled;
 }
@@ -112,11 +112,11 @@
  * Bottom
  */
 
-.uk-tab-bottom {
+.ui-tab-bottom {
     .hook-tab-bottom;
 }
 
-.uk-tab-bottom > * > a {
+.ui-tab-bottom > * > a {
     .hook-tab-bottom-item;
 }
 
@@ -125,31 +125,31 @@
  * 1. Reset Gutter
  */
 
-.uk-tab-left,
-.uk-tab-right {
+.ui-tab-left,
+.ui-tab-right {
     flex-direction: column;
     /* 1 */
     margin-left: 0;
 }
 
 /* 1 */
-.uk-tab-left > *,
-.uk-tab-right > * { padding-left: 0; }
+.ui-tab-left > *,
+.ui-tab-right > * { padding-left: 0; }
 
-.uk-tab-left {
+.ui-tab-left {
     .hook-tab-left;
 }
 
-.uk-tab-right {
+.ui-tab-right {
     .hook-tab-right;
 }
 
-.uk-tab-left > * > a {
+.ui-tab-left > * > a {
     text-align: left;
     .hook-tab-left-item;
 }
 
-.uk-tab-right > * > a {
+.ui-tab-right > * > a {
     text-align: left;
     .hook-tab-right-item;
 }
@@ -184,27 +184,27 @@
 
 .hook-inverse() {
 
-    .uk-tab {
+    .ui-tab {
         .hook-inverse-tab;
     }
 
-    .uk-tab > * > a {
+    .ui-tab > * > a {
         color: @inverse-tab-item-color;
         .hook-inverse-tab-item;
     }
 
-    .uk-tab > * > a:hover,
-    .uk-tab > * > a:focus{
+    .ui-tab > * > a:hover,
+    .ui-tab > * > a:focus{
         color: @inverse-tab-item-hover-color;
         .hook-inverse-tab-item-hover;
     }
 
-    .uk-tab > .uk-active > a {
+    .ui-tab > .ui-active > a {
         color: @inverse-tab-item-active-color;
         .hook-inverse-tab-item-active;
     }
 
-    .uk-tab > .uk-disabled > a {
+    .ui-tab > .ui-disabled > a {
         color: @inverse-tab-item-disabled-color;
         .hook-inverse-tab-item-disabled;
     }

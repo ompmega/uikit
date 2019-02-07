@@ -1,21 +1,21 @@
 // Name:            Animation
 // Description:     Utilities for keyframe animations
 //
-// Component:       `uk-animation-*`
+// Component:       `ui-animation-*`
 //
-// Modifiers:       `uk-animation-reverse`
-//                  `uk-animation-fast`
-//                  `uk-animation-fade`
-//                  `uk-animation-scale-up`
-//                  `uk-animation-scale-down`
-//                  `uk-animation-slide-top-*`
-//                  `uk-animation-slide-bottom-*`
-//                  `uk-animation-slide-left-*`
-//                  `uk-animation-slide-right-*`
-//                  `uk-animation-kenburns`
-//                  `uk-animation-shake`
+// Modifiers:       `ui-animation-reverse`
+//                  `ui-animation-fast`
+//                  `ui-animation-fade`
+//                  `ui-animation-scale-up`
+//                  `ui-animation-scale-down`
+//                  `ui-animation-slide-top-*`
+//                  `ui-animation-slide-bottom-*`
+//                  `ui-animation-slide-left-*`
+//                  `ui-animation-slide-right-*`
+//                  `ui-animation-kenburns`
+//                  `ui-animation-shake`
 //
-// Sub-objects:     `uk-animation-toggle`
+// Sub-objects:     `ui-animation-toggle`
 //
 // ========================================================================
 
@@ -36,7 +36,7 @@ $animation-slide-medium-translate:               50px !default;
    Component: Animation
  ========================================================================== */
 
-[class*='uk-animation-'] {
+[class*='ui-animation-'] {
     animation-duration: $animation-duration;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
@@ -46,7 +46,7 @@ $animation-slide-medium-translate:               50px !default;
 /* Direction modifier
  ========================================================================== */
 
-.uk-animation-reverse {
+.ui-animation-reverse {
     animation-direction: reverse;
     animation-timing-function: ease-in;
 }
@@ -59,13 +59,13 @@ $animation-slide-medium-translate:               50px !default;
  * The toggle is triggered on touch devices using `:focus` and tabindex
  */
 
-.uk-animation-toggle:not(:hover):not(:focus) [class*='uk-animation-'] { animation-name: none; }
+.ui-animation-toggle:not(:hover):not(:focus) [class*='ui-animation-'] { animation-name: none; }
 
 /*
  * 1. Prevent tab highlighting on iOS.
  */
 
-.uk-animation-toggle {
+.ui-animation-toggle {
     /* 1 */
     -webkit-tap-highlight-color: transparent;
 }
@@ -74,7 +74,7 @@ $animation-slide-medium-translate:               50px !default;
  * Remove outline for `tabindex`
  */
 
-.uk-animation-toggle:focus { outline: none; }
+.ui-animation-toggle:focus { outline: none; }
 
 
 /* Animations
@@ -84,8 +84,8 @@ $animation-slide-medium-translate:               50px !default;
  * Fade
  */
 
-.uk-animation-fade {
-    animation-name: uk-fade;
+.ui-animation-fade {
+    animation-name: ui-fade;
     animation-duration: $animation-fade-duration;
     animation-timing-function: linear;
 }
@@ -94,42 +94,42 @@ $animation-slide-medium-translate:               50px !default;
  * Scale
  */
 
-.uk-animation-scale-up { animation-name: uk-fade-scale-02; }
-.uk-animation-scale-down { animation-name: uk-fade-scale-18; }
+.ui-animation-scale-up { animation-name: ui-fade-scale-02; }
+.ui-animation-scale-down { animation-name: ui-fade-scale-18; }
 
 /*
  * Slide
  */
 
-.uk-animation-slide-top { animation-name: uk-fade-top; }
-.uk-animation-slide-bottom { animation-name: uk-fade-bottom; }
-.uk-animation-slide-left { animation-name: uk-fade-left; }
-.uk-animation-slide-right { animation-name: uk-fade-right; }
+.ui-animation-slide-top { animation-name: ui-fade-top; }
+.ui-animation-slide-bottom { animation-name: ui-fade-bottom; }
+.ui-animation-slide-left { animation-name: ui-fade-left; }
+.ui-animation-slide-right { animation-name: ui-fade-right; }
 
 /*
  * Slide Small
  */
 
-.uk-animation-slide-top-small { animation-name: uk-fade-top-small; }
-.uk-animation-slide-bottom-small { animation-name: uk-fade-bottom-small; }
-.uk-animation-slide-left-small { animation-name: uk-fade-left-small; }
-.uk-animation-slide-right-small { animation-name: uk-fade-right-small; }
+.ui-animation-slide-top-small { animation-name: ui-fade-top-small; }
+.ui-animation-slide-bottom-small { animation-name: ui-fade-bottom-small; }
+.ui-animation-slide-left-small { animation-name: ui-fade-left-small; }
+.ui-animation-slide-right-small { animation-name: ui-fade-right-small; }
 
 /*
  * Slide Medium
  */
 
-.uk-animation-slide-top-medium { animation-name: uk-fade-top-medium; }
-.uk-animation-slide-bottom-medium { animation-name: uk-fade-bottom-medium; }
-.uk-animation-slide-left-medium { animation-name: uk-fade-left-medium; }
-.uk-animation-slide-right-medium { animation-name: uk-fade-right-medium; }
+.ui-animation-slide-top-medium { animation-name: ui-fade-top-medium; }
+.ui-animation-slide-bottom-medium { animation-name: ui-fade-bottom-medium; }
+.ui-animation-slide-left-medium { animation-name: ui-fade-left-medium; }
+.ui-animation-slide-right-medium { animation-name: ui-fade-right-medium; }
 
 /*
  * Kenburns
  */
 
-.uk-animation-kenburns {
-    animation-name: uk-scale-kenburns;
+.ui-animation-kenburns {
+    animation-name: ui-scale-kenburns;
     animation-duration: $animation-kenburns-duration;
 }
 
@@ -137,13 +137,13 @@ $animation-slide-medium-translate:               50px !default;
  * Shake
  */
 
-.uk-animation-shake { animation-name: uk-shake; }
+.ui-animation-shake { animation-name: ui-shake; }
 
 
 /* Duration modifier
  ========================================================================== */
 
-.uk-animation-fast { animation-duration: $animation-fast-duration; }
+.ui-animation-fast { animation-duration: $animation-fast-duration; }
 
 
 /* Keyframes used by animation classes
@@ -153,7 +153,7 @@ $animation-slide-medium-translate:               50px !default;
  * Fade
  */
 
-@keyframes uk-fade {
+@keyframes ui-fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
@@ -162,7 +162,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Top
  */
 
-@keyframes uk-fade-top {
+@keyframes ui-fade-top {
     0% {
         opacity: 0;
         transform: translateY(-100%);
@@ -177,7 +177,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Bottom
  */
 
-@keyframes uk-fade-bottom {
+@keyframes ui-fade-bottom {
     0% {
         opacity: 0;
         transform: translateY(100%);
@@ -192,7 +192,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Left
  */
 
-@keyframes uk-fade-left {
+@keyframes ui-fade-left {
     0% {
         opacity: 0;
         transform: translateX(-100%);
@@ -207,7 +207,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Right
  */
 
-@keyframes uk-fade-right {
+@keyframes ui-fade-right {
     0% {
         opacity: 0;
         transform: translateX(100%);
@@ -222,7 +222,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Top Small
  */
 
-@keyframes uk-fade-top-small {
+@keyframes ui-fade-top-small {
     0% {
         opacity: 0;
         transform: translateY(-$animation-slide-small-translate);
@@ -237,7 +237,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Bottom Small
  */
 
-@keyframes uk-fade-bottom-small {
+@keyframes ui-fade-bottom-small {
     0% {
         opacity: 0;
         transform: translateY($animation-slide-small-translate);
@@ -252,7 +252,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Left Small
  */
 
-@keyframes uk-fade-left-small {
+@keyframes ui-fade-left-small {
     0% {
         opacity: 0;
         transform: translateX(-$animation-slide-small-translate);
@@ -267,7 +267,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Right Small
  */
 
-@keyframes uk-fade-right-small {
+@keyframes ui-fade-right-small {
     0% {
         opacity: 0;
         transform: translateX($animation-slide-small-translate);
@@ -282,7 +282,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Top Medium
  */
 
-@keyframes uk-fade-top-medium {
+@keyframes ui-fade-top-medium {
     0% {
         opacity: 0;
         transform: translateY(-$animation-slide-medium-translate);
@@ -297,7 +297,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Bottom Medium
  */
 
-@keyframes uk-fade-bottom-medium {
+@keyframes ui-fade-bottom-medium {
     0% {
         opacity: 0;
         transform: translateY($animation-slide-medium-translate);
@@ -312,7 +312,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Left Medium
  */
 
-@keyframes uk-fade-left-medium {
+@keyframes ui-fade-left-medium {
     0% {
         opacity: 0;
         transform: translateX(-$animation-slide-medium-translate);
@@ -327,7 +327,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Right Medium
  */
 
-@keyframes uk-fade-right-medium {
+@keyframes ui-fade-right-medium {
     0% {
         opacity: 0;
         transform: translateX($animation-slide-medium-translate);
@@ -342,7 +342,7 @@ $animation-slide-medium-translate:               50px !default;
  * Scale Up
  */
 
-@keyframes uk-fade-scale-02 {
+@keyframes ui-fade-scale-02 {
     0% {
         opacity: 0;
         transform: scale(0.2);
@@ -357,7 +357,7 @@ $animation-slide-medium-translate:               50px !default;
  * Scale Down
  */
 
-@keyframes uk-fade-scale-18 {
+@keyframes ui-fade-scale-18 {
     0% {
         opacity: 0;
         transform: scale(1.8);
@@ -372,7 +372,7 @@ $animation-slide-medium-translate:               50px !default;
  * Kenburns
  */
 
-@keyframes uk-scale-kenburns {
+@keyframes ui-scale-kenburns {
     0% { transform: scale(1); }
     100% { transform: scale(1.2); }
 }
@@ -381,7 +381,7 @@ $animation-slide-medium-translate:               50px !default;
  * Shake
  */
 
-@keyframes uk-shake {
+@keyframes ui-shake {
     0%, 100% { transform: translateX(0); }
     10% { transform: translateX(-9px); }
     20% { transform: translateX(8px); }

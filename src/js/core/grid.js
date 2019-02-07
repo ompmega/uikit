@@ -16,8 +16,8 @@ export default {
     },
 
     data: {
-        margin: 'uk-grid-margin',
-        clsStack: 'uk-grid-stack',
+        margin: 'ui-grid-margin',
+        clsStack: 'ui-grid-stack',
         masonry: false,
         parallax: 0
     },
@@ -35,7 +35,7 @@ export default {
     },
 
     connected() {
-        this.masonry && addClass(this.$el, 'uk-flex-top uk-flex-wrap-top');
+        this.masonry && addClass(this.$el, 'ui-flex-top ui-flex-wrap-top');
     },
 
     update: [

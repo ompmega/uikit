@@ -9,7 +9,7 @@ argv._.forEach(arg => {
 });
 
 const currentScopeRegex = /\/\* scoped: ([^*]*) \*\//;
-const currentScopeLegacyRegex = new RegExp('\\.(uk-scope)');
+const currentScopeLegacyRegex = new RegExp('\\.(ui-scope)');
 
 const allFiles = [];
 
@@ -21,7 +21,7 @@ if (argv.h || argv.help) {
 
         example:
 
-        scope.js // will scope with uk-scope
+        scope.js // will scope with ui-scope
         scope.js -s "my-scope" // will replace any existing scope with my-scope
         scope.js cleanup // will remove current scope
 
@@ -55,7 +55,7 @@ function startProcess() {
 
 function getNewScope() {
 
-    const scopeFromInput = argv.scope || argv.s || 'uk-scope';
+    const scopeFromInput = argv.scope || argv.s || 'ui-scope';
 
     if (util.validClassName.test(scopeFromInput)) {
         return Promise.resolve(scopeFromInput);
@@ -83,7 +83,7 @@ function doScope(scopeFromInput) {
                 .then(output => {
                     store.data = `/* scoped: ${scopeFromInput} */\n` +
                     output.replace(new RegExp(`.${scopeFromInput} ${/{(.|[\r\n])*?}/.source}`), '')
-                    .replace(new RegExp(`.${scopeFromInput}${/\s((\.(uk-(drag|modal-page|offcanvas-page|offcanvas-flip)))|html)/.source}`, 'g'), '$1')
+                    .replace(new RegExp(`.${scopeFromInput}${/\s((\.(ui-(drag|modal-page|offcanvas-page|offcanvas-flip)))|html)/.source}`, 'g'), '$1')
                 })
         );
     });

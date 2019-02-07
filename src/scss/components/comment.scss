@@ -1,16 +1,16 @@
 // Name:            Comment
 // Description:     Component to create nested comments
 //
-// Component:       `uk-comment`
+// Component:       `ui-comment`
 //
-// Sub-objects:     `uk-comment-body`
-//                  `uk-comment-header`
-//                  `uk-comment-title`
-//                  `uk-comment-meta`
-//                  `uk-comment-avatar`
-//                  `uk-comment-list`
+// Sub-objects:     `ui-comment-body`
+//                  `ui-comment-header`
+//                  `ui-comment-title`
+//                  `ui-comment-meta`
+//                  `ui-comment-avatar`
+//                  `ui-comment-list`
 //
-// Modifier:        `uk-comment-primary`
+// Modifier:        `ui-comment-primary`
 //
 // ========================================================================
 
@@ -36,7 +36,7 @@ $comment-list-padding-left-m:                    100px !default;
    Component: Comment
  ========================================================================== */
 
-.uk-comment {
+.ui-comment {
     @if(mixin-exists(hook-comment)) {@include hook-comment();}
 }
 
@@ -44,13 +44,13 @@ $comment-list-padding-left-m:                    100px !default;
 /* Sections
  ========================================================================== */
 
-.uk-comment-body {
+.ui-comment-body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     @if(mixin-exists(hook-comment-body)) {@include hook-comment-body();}
 }
 
-.uk-comment-header {
+.ui-comment-header {
     margin-bottom: $comment-header-margin-bottom;
     @if(mixin-exists(hook-comment-header)) {@include hook-comment-header();}
 }
@@ -59,29 +59,29 @@ $comment-list-padding-left-m:                    100px !default;
  * Micro clearfix
  */
 
-.uk-comment-body::before,
-.uk-comment-body::after,
-.uk-comment-header::before,
-.uk-comment-header::after {
+.ui-comment-body::before,
+.ui-comment-body::after,
+.ui-comment-header::before,
+.ui-comment-header::after {
     content: "";
     display: table;
 }
 
-.uk-comment-body::after,
-.uk-comment-header::after { clear: both; }
+.ui-comment-body::after,
+.ui-comment-header::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-comment-body > :last-child,
-.uk-comment-header > :last-child { margin-bottom: 0; }
+.ui-comment-body > :last-child,
+.ui-comment-header > :last-child { margin-bottom: 0; }
 
 
 /* Title
  ========================================================================== */
 
-.uk-comment-title {
+.ui-comment-title {
     font-size: $comment-title-font-size;
     line-height: $comment-title-line-height;
     @if(mixin-exists(hook-comment-title)) {@include hook-comment-title();}
@@ -91,7 +91,7 @@ $comment-list-padding-left-m:                    100px !default;
 /* Meta
  ========================================================================== */
 
-.uk-comment-meta {
+.ui-comment-meta {
     font-size: $comment-meta-font-size;
     line-height: $comment-meta-line-height;
     color: $comment-meta-color;
@@ -102,7 +102,7 @@ $comment-list-padding-left-m:                    100px !default;
 /* Avatar
  ========================================================================== */
 
-.uk-comment-avatar {
+.ui-comment-avatar {
     @if(mixin-exists(hook-comment-avatar)) {@include hook-comment-avatar();}
 }
 
@@ -110,13 +110,13 @@ $comment-list-padding-left-m:                    100px !default;
 /* List
  ========================================================================== */
 
-.uk-comment-list {
+.ui-comment-list {
     padding: 0;
     list-style: none;
 }
 
 /* Adjacent siblings */
-.uk-comment-list > :nth-child(n+2) {
+.ui-comment-list > :nth-child(n+2) {
     margin-top: $comment-list-margin-top;
     @if(mixin-exists(hook-comment-list-adjacent)) {@include hook-comment-list-adjacent();}
 }
@@ -126,7 +126,7 @@ $comment-list-padding-left-m:                    100px !default;
  * Note: General sibling selector allows reply block between comment and sublist
  */
 
-.uk-comment-list .uk-comment ~ ul {
+.ui-comment-list .ui-comment ~ ul {
     margin: $comment-list-margin-top 0 0 0;
     padding-left: $comment-list-padding-left;
     list-style: none;
@@ -136,12 +136,12 @@ $comment-list-padding-left-m:                    100px !default;
 /* Tablet and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-comment-list .uk-comment ~ ul { padding-left: $comment-list-padding-left-m; }
+    .ui-comment-list .ui-comment ~ ul { padding-left: $comment-list-padding-left-m; }
 
 }
 
 /* Adjacent siblings */
-.uk-comment-list .uk-comment ~ ul > :nth-child(n+2) {
+.ui-comment-list .ui-comment ~ ul > :nth-child(n+2) {
     margin-top: $comment-list-margin-top;
     @if(mixin-exists(hook-comment-list-sub-adjacent)) {@include hook-comment-list-sub-adjacent();}
 }
@@ -150,7 +150,7 @@ $comment-list-padding-left-m:                    100px !default;
 /* Style modifier
  ========================================================================== */
 
-.uk-comment-primary {
+.ui-comment-primary {
     @if(mixin-exists(hook-comment-primary)) {@include hook-comment-primary();}
 }
 

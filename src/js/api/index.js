@@ -11,7 +11,7 @@ const UIkit = function (options) {
 
 UIkit.util = util;
 UIkit.data = '__uikit__';
-UIkit.prefix = 'uk-';
+UIkit.prefix = 'ui-';
 UIkit.options = {};
 
 globalAPI(UIkit);

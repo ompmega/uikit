@@ -23,13 +23,13 @@ export default {
     data: {
         group: false,
         threshold: 5,
-        clsItem: 'uk-sortable-item',
-        clsPlaceholder: 'uk-sortable-placeholder',
-        clsDrag: 'uk-sortable-drag',
-        clsDragState: 'uk-drag',
-        clsBase: 'uk-sortable',
-        clsNoDrag: 'uk-sortable-nodrag',
-        clsEmpty: 'uk-sortable-empty',
+        clsItem: 'ui-sortable-item',
+        clsPlaceholder: 'ui-sortable-placeholder',
+        clsDrag: 'ui-sortable-drag',
+        clsDragState: 'ui-drag',
+        clsBase: 'ui-sortable',
+        clsNoDrag: 'ui-sortable-nodrag',
+        clsEmpty: 'ui-sortable-empty',
         clsCustom: '',
         handle: false
     },
@@ -128,7 +128,7 @@ export default {
                 width: this.placeholder.offsetWidth,
                 height: this.placeholder.offsetHeight
             }, css(this.placeholder, ['paddingLeft', 'paddingRight', 'paddingTop', 'paddingBottom'])));
-            attr(this.drag, 'uk-no-boot', '');
+            attr(this.drag, 'ui-no-boot', '');
             addClass(this.drag, this.clsDrag, this.clsCustom);
 
             height(this.drag.firstElementChild, height(this.placeholder.firstElementChild));

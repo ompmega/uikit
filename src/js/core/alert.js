@@ -14,7 +14,7 @@ export default {
 
     data: {
         animation: [true],
-        selClose: '.uk-alert-close',
+        selClose: '.ui-alert-close',
         duration: 150,
         hideProps: assign({opacity: 0}, Togglable.data.hideProps)
     },

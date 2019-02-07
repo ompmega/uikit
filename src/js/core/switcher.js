@@ -15,13 +15,13 @@ export default {
     },
 
     data: {
-        connect: '~.uk-switcher',
+        connect: '~.ui-switcher',
         toggle: '> * > :first-child',
         active: 0,
         swiping: true,
-        cls: 'uk-active',
-        clsContainer: 'uk-switcher',
-        attrItem: 'uk-switcher-item',
+        cls: 'ui-active',
+        clsContainer: 'ui-switcher',
+        attrItem: 'ui-switcher-item',
         queued: true
     },
 
@@ -44,7 +44,7 @@ export default {
             name: 'click',
 
             delegate() {
-                return `${this.toggle}:not(.uk-disabled)`;
+                return `${this.toggle}:not(.ui-disabled)`;
             },
 
             handler(e) {
@@ -121,7 +121,7 @@ export default {
             let toggle, active, next = getIndex(item, children, prev);
 
             for (let i = 0; i < length; i++, next = (next + dir + length) % length) {
-                if (!matches(this.toggles[next], '.uk-disabled *, .uk-disabled, [disabled]')) {
+                if (!matches(this.toggles[next], '.ui-disabled *, .ui-disabled, [disabled]')) {
                     toggle = this.toggles[next];
                     active = children[next];
                     break;

@@ -1,12 +1,12 @@
 // Name:            List
 // Description:     Styles for lists
 //
-// Component:       `uk-list`
+// Component:       `ui-list`
 //
-// Modifiers:       `uk-list-divider`
-//                  `uk-list-striped`
-//                  `uk-list-bullet`
-//                  `uk-list-large`
+// Modifiers:       `ui-list-divider`
+//                  `ui-list-striped`
+//                  `ui-list-bullet`
+//                  `ui-list-large`
 //
 // ========================================================================
 
@@ -43,7 +43,7 @@
    Component: List
  ========================================================================== */
 
-.uk-list {
+.ui-list {
     padding: 0;
     list-style: none;
 }
@@ -52,25 +52,25 @@
  * Micro clearfix
  */
 
-.uk-list > li::before,
-.uk-list > li::after {
+.ui-list > li::before,
+.ui-list > li::after {
     content: "";
     display: table;
 }
 
-.uk-list > li::after { clear: both; }
+.ui-list > li::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-list > li > :last-child { margin-bottom: 0; }
+.ui-list > li > :last-child { margin-bottom: 0; }
 
 /*
  * Nested lists
  */
 
-.uk-list ul {
+.ui-list ul {
     margin: 0;
     padding-left: @list-nested-padding-left;
     list-style: none;
@@ -80,8 +80,8 @@
  * Style
  */
 
-.uk-list > li:nth-child(n+2),
-.uk-list > li > ul { margin-top: @list-margin-top; }
+.ui-list > li:nth-child(n+2),
+.ui-list > li > ul { margin-top: @list-margin-top; }
 
 
 /* Style modifiers
@@ -91,7 +91,7 @@
  * Divider
  */
 
-.uk-list-divider > li:nth-child(n+2) {
+.ui-list-divider > li:nth-child(n+2) {
     margin-top: @list-divider-margin-top;
     padding-top: @list-divider-margin-top;
     border-top: @list-divider-border-width solid @list-divider-border;
@@ -102,26 +102,26 @@
  * Striped
  */
 
-.uk-list-striped > li {
+.ui-list-striped > li {
     padding: @list-striped-padding-vertical @list-striped-padding-horizontal;
     .hook-list-striped;
 }
 
-.uk-list-striped > li:nth-of-type(odd) { background: @list-striped-background; }
+.ui-list-striped > li:nth-of-type(odd) { background: @list-striped-background; }
 
-.uk-list-striped > li:nth-child(n+2) { margin-top: 0; }
+.ui-list-striped > li:nth-child(n+2) { margin-top: 0; }
 
 /*
  * Bullet
  * 1. Reset display `table` which causes issues in combination with multi column layouts.
  */
 
-.uk-list-bullet > li {
+.ui-list-bullet > li {
     position: relative;
     padding-left: ~'calc(@{list-bullet-width} + @{list-bullet-margin-right})';
 }
 
-.uk-list-bullet > li::before {
+.ui-list-bullet > li::before {
     content: "";
     position: absolute;
     top: 0;
@@ -140,14 +140,14 @@
 /* Size modifier
  ========================================================================== */
 
-.uk-list-large > li:nth-child(n+2),
-.uk-list-large > li > ul { margin-top: @list-large-margin-top; }
+.ui-list-large > li:nth-child(n+2),
+.ui-list-large > li > ul { margin-top: @list-large-margin-top; }
 
 /*
  * Divider
  */
 
-.uk-list-large.uk-list-divider > li:nth-child(n+2) {
+.ui-list-large.ui-list-divider > li:nth-child(n+2) {
     margin-top: @list-large-divider-margin-top;
     padding-top: @list-large-divider-margin-top;
 }
@@ -156,12 +156,12 @@
  * Striped
  */
 
-.uk-list-large.uk-list-striped > li {
+.ui-list-large.ui-list-striped > li {
     padding: @list-large-striped-padding-vertical @list-large-striped-padding-horizontal;
     .hook-list-striped;
 }
 
-.uk-list-large.uk-list-striped > li:nth-child(n+2) { margin-top: 0; }
+.ui-list-large.ui-list-striped > li:nth-child(n+2) { margin-top: 0; }
 
 
 // Hooks
@@ -184,18 +184,18 @@
 
 .hook-inverse() {
 
-    .uk-list-divider > li:nth-child(n+2) {
+    .ui-list-divider > li:nth-child(n+2) {
         border-top-color: @inverse-list-divider-border;
         .hook-inverse-list-divider;
     }
 
-    .uk-list-striped > li {
+    .ui-list-striped > li {
         .hook-inverse-list-striped;
     }
 
-    .uk-list-striped > li:nth-of-type(odd) { background-color: @inverse-list-striped-background; }
+    .ui-list-striped > li:nth-of-type(odd) { background-color: @inverse-list-striped-background; }
 
-    .uk-list-bullet > li::before {
+    .ui-list-bullet > li::before {
         .svg-fill(@internal-list-bullet-image, "#000", @inverse-list-bullet-icon-color);
         .hook-inverse-list-bullet;
     }

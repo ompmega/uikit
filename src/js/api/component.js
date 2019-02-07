@@ -60,7 +60,7 @@ export default function (UIkit) {
 
         if (UIkit._initialized && !opt.functional) {
             const id = hyphenate(name);
-            fastdom.read(() => UIkit[name](`[uk-${id}],[data-uk-${id}]`));
+            fastdom.read(() => UIkit[name](`[ui-${id}],[data-ui-${id}]`));
         }
 
         return components[name] = isPlainObject(options) ? opt : options;
@@ -98,7 +98,7 @@ export default function (UIkit) {
 }
 
 export function getComponentName(attribute) {
-    return startsWith(attribute, 'uk-') || startsWith(attribute, 'data-uk-')
-        ? camelize(attribute.replace('data-uk-', '').replace('uk-', ''))
+    return startsWith(attribute, 'ui-') || startsWith(attribute, 'data-ui-')
+        ? camelize(attribute.replace('data-ui-', '').replace('ui-', ''))
         : false;
 }

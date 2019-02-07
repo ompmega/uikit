@@ -95,7 +95,7 @@ export default function (UIkit) {
 
     function apply(node, fn) {
 
-        if (node.nodeType !== 1 || hasAttr(node, 'uk-no-boot')) {
+        if (node.nodeType !== 1 || hasAttr(node, 'ui-no-boot')) {
             return;
         }
 

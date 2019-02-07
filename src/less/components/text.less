@@ -1,7 +1,7 @@
 // Name:            Text
 // Description:     Utilities for text
 //
-// Component:       `uk-text-*`
+// Component:       `ui-text-*`
 //
 // ========================================================================
 
@@ -43,14 +43,14 @@
 /* Style modifiers
  ========================================================================== */
 
-.uk-text-lead {
+.ui-text-lead {
     font-size: @text-lead-font-size;
     line-height: @text-lead-line-height;
     color: @text-lead-color;
     .hook-text-lead;
 }
 
-.uk-text-meta {
+.ui-text-meta {
     font-size: @text-meta-font-size;
     line-height: @text-meta-line-height;
     color: @text-meta-color;
@@ -61,13 +61,13 @@
 /* Size modifiers
  ========================================================================== */
 
-.uk-text-small {
+.ui-text-small {
     font-size: @text-small-font-size;
     line-height: @text-small-line-height;
     .hook-text-small;
 }
 
-.uk-text-large {
+.ui-text-large {
     font-size: @text-large-font-size;
     line-height: @text-large-line-height;
     .hook-text-large;
@@ -77,26 +77,26 @@
 /* Weight modifier
  ========================================================================== */
 
-.uk-text-bold { font-weight: @text-bold-font-weight; }
+.ui-text-bold { font-weight: @text-bold-font-weight; }
 
 
 /* Transform modifier
  ========================================================================== */
 
-.uk-text-uppercase { text-transform: uppercase !important; }
-.uk-text-capitalize { text-transform: capitalize !important; }
-.uk-text-lowercase { text-transform: lowercase !important; }
+.ui-text-uppercase { text-transform: uppercase !important; }
+.ui-text-capitalize { text-transform: capitalize !important; }
+.ui-text-lowercase { text-transform: lowercase !important; }
 
 
 /* Color modifiers
  ========================================================================== */
 
-.uk-text-muted { color: @text-muted-color !important; }
-.uk-text-emphasis { color: @text-emphasis-color !important; }
-.uk-text-primary { color: @text-primary-color !important; }
-.uk-text-success { color: @text-success-color !important; }
-.uk-text-warning { color: @text-warning-color !important; }
-.uk-text-danger { color: @text-danger-color !important; }
+.ui-text-muted { color: @text-muted-color !important; }
+.ui-text-emphasis { color: @text-emphasis-color !important; }
+.ui-text-primary { color: @text-primary-color !important; }
+.ui-text-success { color: @text-success-color !important; }
+.ui-text-warning { color: @text-warning-color !important; }
+.ui-text-danger { color: @text-danger-color !important; }
 
 
 /* Background modifier
@@ -109,7 +109,7 @@
  * 3. Fallback color for IE11
  */
 
-.uk-text-background {
+.ui-text-background {
     /* 1 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -121,7 +121,7 @@
 
 @supports (-webkit-background-clip: text) {
 
-    .uk-text-background {
+    .ui-text-background {
         background-color: @text-background-color;
         .hook-text-background;
     }
@@ -132,44 +132,44 @@
 /* Alignment modifiers
  ========================================================================== */
 
-.uk-text-left { text-align: left !important; }
-.uk-text-right { text-align: right !important; }
-.uk-text-center { text-align: center !important; }
-.uk-text-justify { text-align: justify !important; }
+.ui-text-left { text-align: left !important; }
+.ui-text-right { text-align: right !important; }
+.ui-text-center { text-align: center !important; }
+.ui-text-justify { text-align: justify !important; }
 
 /* Phone landscape and bigger */
 @media (min-width: @breakpoint-small) {
 
-    .uk-text-left\@s { text-align: left !important; }
-    .uk-text-right\@s { text-align: right !important; }
-    .uk-text-center\@s { text-align: center !important; }
+    .ui-text-left\@s { text-align: left !important; }
+    .ui-text-right\@s { text-align: right !important; }
+    .ui-text-center\@s { text-align: center !important; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-text-left\@m { text-align: left !important; }
-    .uk-text-right\@m { text-align: right !important; }
-    .uk-text-center\@m { text-align: center !important; }
+    .ui-text-left\@m { text-align: left !important; }
+    .ui-text-right\@m { text-align: right !important; }
+    .ui-text-center\@m { text-align: center !important; }
 
 }
 
 /* Desktop and bigger */
 @media (min-width: @breakpoint-large) {
 
-    .uk-text-left\@l { text-align: left !important; }
-    .uk-text-right\@l { text-align: right !important; }
-    .uk-text-center\@l { text-align: center !important; }
+    .ui-text-left\@l { text-align: left !important; }
+    .ui-text-right\@l { text-align: right !important; }
+    .ui-text-center\@l { text-align: center !important; }
 
 }
 
 /* Large screen and bigger */
 @media (min-width: @breakpoint-xlarge) {
 
-    .uk-text-left\@xl { text-align: left !important; }
-    .uk-text-right\@xl { text-align: right !important; }
-    .uk-text-center\@xl { text-align: center !important; }
+    .ui-text-left\@xl { text-align: left !important; }
+    .ui-text-right\@xl { text-align: right !important; }
+    .ui-text-center\@xl { text-align: center !important; }
 
 }
 
@@ -177,10 +177,10 @@
  * Vertical
  */
 
-.uk-text-top { vertical-align: top !important; }
-.uk-text-middle { vertical-align: middle !important; }
-.uk-text-bottom { vertical-align: bottom !important; }
-.uk-text-baseline { vertical-align: baseline !important; }
+.ui-text-top { vertical-align: top !important; }
+.ui-text-middle { vertical-align: middle !important; }
+.ui-text-bottom { vertical-align: bottom !important; }
+.ui-text-baseline { vertical-align: baseline !important; }
 
 
 /* Wrap modifiers
@@ -190,7 +190,7 @@
  * Prevent text from wrapping onto multiple lines
  */
 
-.uk-text-nowrap { white-space: nowrap; }
+.ui-text-nowrap { white-space: nowrap; }
 
 /*
  * 1. Make sure a max-width is set after which truncation can occur
@@ -198,7 +198,7 @@
  * 3. Fix for table cells
  */
 
-.uk-text-truncate {
+.ui-text-truncate {
     /* 1 */
     max-width: 100%;
     /* 2 */
@@ -208,8 +208,8 @@
 }
 
 /* 2 */
-th.uk-text-truncate,
-td.uk-text-truncate { max-width: 0; }
+th.ui-text-truncate,
+td.ui-text-truncate { max-width: 0; }
 
 
 /*
@@ -220,7 +220,7 @@ td.uk-text-truncate { max-width: 0; }
  * Note: Not using `hyphens: auto;` because it hyphenates text even if not needed
  */
 
-.uk-text-break {
+.ui-text-break {
     /* 1 */
     overflow-wrap: break-word;
     /* 2 */
@@ -228,8 +228,8 @@ td.uk-text-truncate { max-width: 0; }
 }
 
 /* 3 */
-th.uk-text-break,
-td.uk-text-break { word-break: break-all; }
+th.ui-text-break,
+td.ui-text-break { word-break: break-all; }
 
 
 
@@ -257,19 +257,19 @@ td.uk-text-break { word-break: break-all; }
 
 .hook-inverse() {
 
-    .uk-text-lead {
+    .ui-text-lead {
         color: @inverse-text-lead-color;
         .hook-inverse-text-lead;
     }
 
-    .uk-text-meta {
+    .ui-text-meta {
         color: @inverse-text-meta-color;
         .hook-inverse-text-meta;
     }
 
-    .uk-text-muted { color: @inverse-text-muted-color !important; }
-    .uk-text-emphasis { color: @inverse-text-emphasis-color !important; }
-    .uk-text-primary { color: @inverse-text-primary-color !important; }
+    .ui-text-muted { color: @inverse-text-muted-color !important; }
+    .ui-text-emphasis { color: @inverse-text-emphasis-color !important; }
+    .ui-text-primary { color: @inverse-text-primary-color !important; }
 
 }
 

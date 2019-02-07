@@ -23,9 +23,9 @@ export default {
     },
 
     data: {
-        dropdown: '.uk-navbar-nav > li',
+        dropdown: '.ui-navbar-nav > li',
         align: !isRtl ? 'left' : 'right',
-        clsDrop: 'uk-navbar-dropdown',
+        clsDrop: 'ui-navbar-dropdown',
         mode: undefined,
         offset: undefined,
         delayShow: undefined,
@@ -38,7 +38,7 @@ export default {
         dropbarAnchor: false,
         duration: 200,
         forceHeight: true,
-        selMinHeight: '.uk-navbar-nav > li > a, .uk-navbar-item, .uk-navbar-toggle'
+        selMinHeight: '.ui-navbar-nav > li > a, .ui-navbar-item, .ui-navbar-toggle'
     },
 
     computed: {
@@ -65,14 +65,14 @@ export default {
 
         const {dropbar} = this.$props;
 
-        this.dropbar = dropbar && (query(dropbar, this.$el) || $('+ .uk-navbar-dropbar', this.$el) || $('<div></div>'));
+        this.dropbar = dropbar && (query(dropbar, this.$el) || $('+ .ui-navbar-dropbar', this.$el) || $('<div></div>'));
 
         if (this.dropbar) {
 
-            addClass(this.dropbar, 'uk-navbar-dropbar');
+            addClass(this.dropbar, 'ui-navbar-dropbar');
 
             if (this.dropbarMode === 'slide') {
-                addClass(this.dropbar, 'uk-navbar-dropbar-slide');
+                addClass(this.dropbar, 'ui-navbar-dropbar-slide');
             }
         }
 

@@ -1,20 +1,20 @@
 // Name:            Button
 // Description:     Styles for buttons
 //
-// Component:       `uk-button`
+// Component:       `ui-button`
 //
-// Sub-objects:     `uk-button-group`
+// Sub-objects:     `ui-button-group`
 //
-// Modifiers:       `uk-button-default`
-//                  `uk-button-primary`
-//                  `uk-button-secondary`
-//                  `uk-button-danger`
-//                  `uk-button-text`
-//                  `uk-button-link`
-//                  `uk-button-small`
-//                  `uk-button-large`
+// Modifiers:       `ui-button-default`
+//                  `ui-button-primary`
+//                  `ui-button-secondary`
+//                  `ui-button-danger`
+//                  `ui-button-text`
+//                  `ui-button-link`
+//                  `ui-button-small`
+//                  `ui-button-large`
 //
-// States:          `uk-active`
+// States:          `ui-active`
 //
 // ========================================================================
 
@@ -94,7 +94,7 @@
  * 9. Required for `a`.
  */
 
-.uk-button {
+.ui-button {
     /* 1 */
     margin: 0;
     /* 2 */
@@ -121,33 +121,33 @@
     .hook-button;
 }
 
-.uk-button:not(:disabled) { cursor: pointer; }
+.ui-button:not(:disabled) { cursor: pointer; }
 
 /*
  * Remove the inner border and padding in Firefox.
  */
 
-.uk-button::-moz-focus-inner {
+.ui-button::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
 
 /* Hover */
-.uk-button:hover {
+.ui-button:hover {
     /* 9 */
     text-decoration: none;
     .hook-button-hover;
 }
 
 /* Focus */
-.uk-button:focus {
+.ui-button:focus {
     outline: none;
     .hook-button-focus;
 }
 
 /* OnClick + Active */
-.uk-button:active,
-.uk-button.uk-active {
+.ui-button:active,
+.ui-button.ui-active {
     .hook-button-active;
 }
 
@@ -159,23 +159,23 @@
  * Default
  */
 
-.uk-button-default {
+.ui-button-default {
     background-color: @button-default-background;
     color: @button-default-color;
     .hook-button-default;
 }
 
 /* Hover + Focus */
-.uk-button-default:hover,
-.uk-button-default:focus {
+.ui-button-default:hover,
+.ui-button-default:focus {
     background-color: @button-default-hover-background;
     color: @button-default-hover-color;
     .hook-button-default-hover;
 }
 
 /* OnClick + Active */
-.uk-button-default:active,
-.uk-button-default.uk-active {
+.ui-button-default:active,
+.ui-button-default.ui-active {
     background-color: @button-default-active-background;
     color: @button-default-active-color;
     .hook-button-default-active;
@@ -185,23 +185,23 @@
  * Primary
  */
 
-.uk-button-primary {
+.ui-button-primary {
     background-color: @button-primary-background;
     color: @button-primary-color;
     .hook-button-primary;
 }
 
 /* Hover + Focus */
-.uk-button-primary:hover,
-.uk-button-primary:focus {
+.ui-button-primary:hover,
+.ui-button-primary:focus {
     background-color: @button-primary-hover-background;
     color: @button-primary-hover-color;
     .hook-button-primary-hover;
 }
 
 /* OnClick + Active */
-.uk-button-primary:active,
-.uk-button-primary.uk-active {
+.ui-button-primary:active,
+.ui-button-primary.ui-active {
     background-color: @button-primary-active-background;
     color: @button-primary-active-color;
     .hook-button-primary-active;
@@ -211,23 +211,23 @@
  * Secondary
  */
 
-.uk-button-secondary {
+.ui-button-secondary {
     background-color: @button-secondary-background;
     color: @button-secondary-color;
     .hook-button-secondary;
 }
 
 /* Hover + Focus */
-.uk-button-secondary:hover,
-.uk-button-secondary:focus {
+.ui-button-secondary:hover,
+.ui-button-secondary:focus {
     background-color: @button-secondary-hover-background;
     color: @button-secondary-hover-color;
     .hook-button-secondary-hover;
 }
 
 /* OnClick + Active */
-.uk-button-secondary:active,
-.uk-button-secondary.uk-active {
+.ui-button-secondary:active,
+.ui-button-secondary.ui-active {
     background-color: @button-secondary-active-background;
     color: @button-secondary-active-color;
     .hook-button-secondary-active;
@@ -237,23 +237,23 @@
  * Danger
  */
 
-.uk-button-danger {
+.ui-button-danger {
     background-color: @button-danger-background;
     color: @button-danger-color;
     .hook-button-danger;
 }
 
 /* Hover + Focus */
-.uk-button-danger:hover,
-.uk-button-danger:focus {
+.ui-button-danger:hover,
+.ui-button-danger:focus {
     background-color: @button-danger-hover-background;
     color: @button-danger-hover-color;
     .hook-button-danger-hover;
 }
 
 /* OnClick + Active */
-.uk-button-danger:active,
-.uk-button-danger.uk-active {
+.ui-button-danger:active,
+.ui-button-danger.ui-active {
     background-color: @button-danger-active-background;
     color: @button-danger-active-color;
     .hook-button-danger-active;
@@ -264,10 +264,10 @@
  * The same for all style modifiers
  */
 
-.uk-button-default:disabled,
-.uk-button-primary:disabled,
-.uk-button-secondary:disabled,
-.uk-button-danger:disabled {
+.ui-button-default:disabled,
+.ui-button-primary:disabled,
+.ui-button-secondary:disabled,
+.ui-button-danger:disabled {
     background-color: @button-disabled-background;
     color: @button-disabled-color;
     .hook-button-disabled;
@@ -277,14 +277,14 @@
 /* Size modifiers
  ========================================================================== */
 
-.uk-button-small {
+.ui-button-small {
     padding: 0 @button-small-padding-horizontal;
     line-height: @button-small-line-height;
     font-size: @button-small-font-size;
     .hook-button-small;
 }
 
-.uk-button-large {
+.ui-button-large {
     padding: 0 @button-large-padding-horizontal;
     line-height: @button-large-line-height;
     font-size: @button-large-font-size;
@@ -301,7 +301,7 @@
  * 2. Style
  */
 
-.uk-button-text {
+.ui-button-text {
     /* 1 */
     padding: 0;
     line-height: @button-text-line-height;
@@ -312,14 +312,14 @@
 }
 
 /* Hover + Focus */
-.uk-button-text:hover,
-.uk-button-text:focus {
+.ui-button-text:hover,
+.ui-button-text:focus {
     color: @button-text-hover-color;
     .hook-button-text-hover;
 }
 
 /* Disabled */
-.uk-button-text:disabled {
+.ui-button-text:disabled {
     color: @button-text-disabled-color;
     .hook-button-text-disabled;
 }
@@ -330,7 +330,7 @@
  * 2. Style
  */
 
-.uk-button-link {
+.ui-button-link {
     /* 1 */
     padding: 0;
     line-height: @button-link-line-height;
@@ -341,14 +341,14 @@
 }
 
 /* Hover + Focus */
-.uk-button-link:hover,
-.uk-button-link:focus {
+.ui-button-link:hover,
+.ui-button-link:focus {
     color: @button-link-hover-color;
     text-decoration: @button-link-hover-text-decoration;
 }
 
 /* Disabled */
-.uk-button-link:disabled {
+.ui-button-link:disabled {
     color: @button-link-disabled-color;
     text-decoration: none;
 }
@@ -363,7 +363,7 @@
  * 3. Create position context
  */
 
-.uk-button-group {
+.ui-button-group {
     /* 1 */
     display: inline-flex;
     /* 2 */
@@ -437,21 +437,21 @@
     // Default
     //
 
-    .uk-button-default {
+    .ui-button-default {
         background-color: @inverse-button-default-background;
         color: @inverse-button-default-color;
         .hook-inverse-button-default;
     }
 
-    .uk-button-default:hover,
-    .uk-button-default:focus {
+    .ui-button-default:hover,
+    .ui-button-default:focus {
         background-color: @inverse-button-default-hover-background;
         color: @inverse-button-default-hover-color;
         .hook-inverse-button-default-hover;
     }
 
-    .uk-button-default:active,
-    .uk-button-default.uk-active {
+    .ui-button-default:active,
+    .ui-button-default.ui-active {
         background-color: @inverse-button-default-active-background;
         color: @inverse-button-default-active-color;
         .hook-inverse-button-default-active;
@@ -461,21 +461,21 @@
     // Primary
     //
 
-    .uk-button-primary {
+    .ui-button-primary {
         background-color: @inverse-button-primary-background;
         color: @inverse-button-primary-color;
         .hook-inverse-button-primary;
     }
 
-    .uk-button-primary:hover,
-    .uk-button-primary:focus {
+    .ui-button-primary:hover,
+    .ui-button-primary:focus {
         background-color: @inverse-button-primary-hover-background;
         color: @inverse-button-primary-hover-color;
         .hook-inverse-button-primary-hover;
     }
 
-    .uk-button-primary:active,
-    .uk-button-primary.uk-active {
+    .ui-button-primary:active,
+    .ui-button-primary.ui-active {
         background-color: @inverse-button-primary-active-background;
         color: @inverse-button-primary-active-color;
         .hook-inverse-button-primary-active;
@@ -485,21 +485,21 @@
     // Secondary
     //
 
-    .uk-button-secondary {
+    .ui-button-secondary {
         background-color: @inverse-button-secondary-background;
         color: @inverse-button-secondary-color;
         .hook-inverse-button-secondary;
     }
 
-    .uk-button-secondary:hover,
-    .uk-button-secondary:focus {
+    .ui-button-secondary:hover,
+    .ui-button-secondary:focus {
         background-color: @inverse-button-secondary-hover-background;
         color: @inverse-button-secondary-hover-color;
         .hook-inverse-button-secondary-hover;
     }
 
-    .uk-button-secondary:active,
-    .uk-button-secondary.uk-active {
+    .ui-button-secondary:active,
+    .ui-button-secondary.ui-active {
         background-color: @inverse-button-secondary-active-background;
         color: @inverse-button-secondary-active-color;
         .hook-inverse-button-secondary-active;
@@ -509,18 +509,18 @@
     // Text
     //
 
-    .uk-button-text {
+    .ui-button-text {
         color: @inverse-button-text-color;
         .hook-inverse-button-text;
     }
 
-    .uk-button-text:hover,
-    .uk-button-text:focus {
+    .ui-button-text:hover,
+    .ui-button-text:focus {
         color: @inverse-button-text-hover-color;
         .hook-inverse-button-text-hover;
     }
 
-    .uk-button-text:disabled {
+    .ui-button-text:disabled {
         color: @inverse-button-text-disabled-color;
         .hook-inverse-button-text-disabled;
     }
@@ -529,13 +529,13 @@
     // Link
     //
 
-    .uk-button-link {
+    .ui-button-link {
         color: @inverse-button-link-color;
         .hook-inverse-button-link;
     }
 
-    .uk-button-link:hover,
-    .uk-button-link:focus { color: @inverse-button-link-hover-color; }
+    .ui-button-link:hover,
+    .ui-button-link:focus { color: @inverse-button-link-hover-color; }
 
 
 }

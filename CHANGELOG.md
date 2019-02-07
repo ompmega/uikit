@@ -14,7 +14,7 @@
 ## Removed
 
 - Remove `isReady` function
-- Form Custom component no longer sets `uk-hover` and `uk-focus` classes
+- Form Custom component no longer sets `ui-hover` and `ui-focus` classes
 
 ### Fixed
 
@@ -55,7 +55,7 @@
 
 ### Removed
 
-- Remove `uk-hover` class
+- Remove `ui-hover` class
 - Remove artificial `click` event on mobile devices
 
 ### Fixed
@@ -455,7 +455,7 @@
 
 ### Changed
 
-- Make `uk-form-icon` padding work with size modifier
+- Make `ui-form-icon` padding work with size modifier
 - Make heading line position top a variable
 - Allow dropdowns in Iconnav component
 - Allow any property in `svg-fill` mixin
@@ -530,8 +530,8 @@
 
 ### Changed
 
-- Add `uk-slider-container` class to clip the Slider component
-- Remove auto-clipping from Slider items. Use `uk-cover-container` instead.
+- Add `ui-slider-container` class to clip the Slider component
+- Remove auto-clipping from Slider items. Use `ui-cover-container` instead.
 
 ### Fixed
 
@@ -566,7 +566,7 @@
 - Add support to play/pause Video component as it enters/leaves the viewport
 - Add file size restriction `maxSize` to Upload component
 - Add option to pass `data-alt=""` to images in Lightbox component
-- Component DOM attributes like `uk-grid` are being observed for changes
+- Component DOM attributes like `ui-grid` are being observed for changes
 - Improve `UIkit.container` setter (allows for assigning selector strings)
 - Make some util methods more error resilient
 - Add config options to build scripts, type `./build/build.js -h` for options
@@ -582,7 +582,7 @@
 
 ### Deprecated
 
-- Deprecate `uk-gif`
+- Deprecate `ui-gif`
 
 ### Removed
 
@@ -594,14 +594,14 @@
 ### Fixed
 
 - Make Accordion component accessible through keyboard
-- Make `uk-visible-toggle` accessible through keyboard
-- Make `uk-transition-toggle` accessible through keyboard
+- Make `ui-visible-toggle` accessible through keyboard
+- Make `ui-transition-toggle` accessible through keyboard
 - Fix scrolling with scrollbar on Modal closes Modal
 - Fix `container` options
 - Fix initializing Icon components programmatically
 - Fix accordion initial active option
 - Fix webpack builds (npm run test)
-- 'uk-scrollspy-class' attr may now be `data-` prefixed too
+- 'ui-scrollspy-class' attr may now be `data-` prefixed too
 - Fix dialogs not being removed from DOM after closing
 
 ## 3.0.0 beta 35 (November 13, 2017)
@@ -691,8 +691,8 @@
 ### Changed
 
 - IMPORTANT: Remove jQuery dependency
-- Remove `uk-section-media` from Section component
-- Change `uk-tab-left` text alignment to left
+- Remove `ui-section-media` from Section component
+- Change `ui-tab-left` text alignment to left
 - Update Overview in tests
 - Rename `isWithin` to `within`
 - Allow fullscreen mode for YouTube and Vimeo videos in Lightbox
@@ -702,7 +702,7 @@
 
 - Fix responsive images in modal for IE11
 - Fix close button outside causing a scrollbar on small devices
-- Fix inverse style for `uk-hr`
+- Fix inverse style for `ui-hr`
 - Fix video size of Vimeo videos in Lightbox component
 - Fix closing stacked modals
 
@@ -761,7 +761,7 @@
 
 ### Fixed
 
-- Remove stacking context for `uk-inline`
+- Remove stacking context for `ui-inline`
 - Prevent scrolling in Lightboxes with one slide only
 
 ## 3.0.0 beta 26 (July 20, 2017)
@@ -775,7 +775,7 @@
 
 - IMPORTANT: Remove caption from Modal component. Use Lightbox component instead
 - IMPORTANT: Remove lightbox modifier from Modal component. Use Lightbox component instead
-- IMPORTANT: Remove center option from Modal component. Use `uk-margin-auto-vertical` modifier
+- IMPORTANT: Remove center option from Modal component. Use `ui-margin-auto-vertical` modifier
 - IMPORTANT: Renamed `@modal-dialog-margin-vertical` to `@modal-padding-vertical-s`
 - IMPORTANT: Renamed `@modal-dialog-margin-vertical-xs` to `@modal-padding-vertical`
 - Refactored Modal component
@@ -843,7 +843,7 @@
 - Add hidden classes for touch devices to Visibility component
 - Add padding xlarge to Padding component
 - Add transform center to Utility component
-- Add `clsBelow` option for Sticky component (uk-sticky-below)
+- Add `clsBelow` option for Sticky component (ui-sticky-below)
 
 ### Changed
 
@@ -877,7 +877,7 @@
 
 ### Changed
 
-- IMPORTANT: Remove style from default Table component. Use `uk-table-divider` modifier
+- IMPORTANT: Remove style from default Table component. Use `ui-table-divider` modifier
 - Move border style to table row instead of table cell
 - Remove margin from the last-child in Table component cell
 
@@ -961,7 +961,7 @@
 
 ### Changed
 
-- Rename `uk-background` to `uk-background-default`
+- Rename `ui-background` to `ui-background-default`
 - Drop, Dropdown, Toggle component's mode is a comma separated list now (to support hover only mode)
 
 ### Fixed
@@ -1066,7 +1066,7 @@
 ### Added
 
 - Height Viewport component supports selector for Offset Bottom option
-- Allow to preserve all color with one class when using `uk-svg`
+- Allow to preserve all color with one class when using `ui-svg`
 - Add RTL support (RTL first)
 
 ### Changed
@@ -1094,7 +1094,7 @@
 
 ### Added
 
-- Apply class `uk-svg` to SVG component
+- Apply class `ui-svg` to SVG component
 
 ### Changed
 
@@ -1123,7 +1123,7 @@
 
 ### Removed
 
-- Remove `uk-cover` CSS only solution
+- Remove `ui-cover` CSS only solution
 
 ### Fixed
 
@@ -1161,7 +1161,7 @@
 - Fix beta 2 regression for SVG’s (Safari)
 - Fix Sticky width after resize
 - Fix page width on resizing Offcanvas
-- Fix props initialization for `data-uk-` components
+- Fix props initialization for `data-ui-` components
 - Fix sortable children loosing event bindings after sort
 
 ## 3.0.0 beta 4 (January 18, 2017)
@@ -1176,7 +1176,7 @@
 
 ### Added
 
-- Add support for `data-uk-` prefixed component attributes
+- Add support for `data-ui-` prefixed component attributes
 - Add support for Primary Arguments in components
 - Add support for Functional Components
 - Components reinitialize on added/removed children

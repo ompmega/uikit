@@ -26,10 +26,10 @@ export default {
         bottom: false,
         offset: 0,
         animation: '',
-        clsActive: 'uk-active',
+        clsActive: 'ui-active',
         clsInactive: '',
-        clsFixed: 'uk-sticky-fixed',
-        clsBelow: 'uk-sticky-below',
+        clsFixed: 'ui-sticky-fixed',
+        clsBelow: 'ui-sticky-below',
         selTarget: '',
         widthElement: false,
         showOnUp: false,
@@ -67,7 +67,7 @@ export default {
     },
 
     connected() {
-        this.placeholder = $('+ .uk-sticky-placeholder', this.$el) || $('<div class="uk-sticky-placeholder"></div>');
+        this.placeholder = $('+ .ui-sticky-placeholder', this.$el) || $('<div class="ui-sticky-placeholder"></div>');
         this.isFixed = false;
         this.isActive = false;
     },

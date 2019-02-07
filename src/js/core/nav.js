@@ -5,7 +5,7 @@ export default {
     extends: Accordion,
 
     data: {
-        targets: '> .uk-parent',
+        targets: '> .ui-parent',
         toggle: '> a',
         content: '> ul'
     }

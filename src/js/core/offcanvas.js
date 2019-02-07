@@ -17,15 +17,15 @@ export default {
         mode: 'slide',
         flip: false,
         overlay: false,
-        clsPage: 'uk-offcanvas-page',
-        clsContainer: 'uk-offcanvas-container',
-        selPanel: '.uk-offcanvas-bar',
-        clsFlip: 'uk-offcanvas-flip',
-        clsContainerAnimation: 'uk-offcanvas-container-animation',
-        clsSidebarAnimation: 'uk-offcanvas-bar-animation',
-        clsMode: 'uk-offcanvas',
-        clsOverlay: 'uk-offcanvas-overlay',
-        selClose: '.uk-offcanvas-close'
+        clsPage: 'ui-offcanvas-page',
+        clsContainer: 'ui-offcanvas-container',
+        selPanel: '.ui-offcanvas-bar',
+        clsFlip: 'ui-offcanvas-flip',
+        clsContainerAnimation: 'ui-offcanvas-container-animation',
+        clsSidebarAnimation: 'ui-offcanvas-bar-animation',
+        clsMode: 'ui-offcanvas',
+        clsOverlay: 'ui-offcanvas-overlay',
+        selClose: '.ui-offcanvas-close'
     },
 
     computed: {

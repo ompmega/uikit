@@ -8,8 +8,8 @@ export default {
     },
 
     data: {
-        margin: 'uk-margin-small-top',
-        firstColumn: 'uk-first-column'
+        margin: 'ui-margin-small-top',
+        firstColumn: 'ui-first-column'
     },
 
     update: {

@@ -1,23 +1,23 @@
 // Name:            Card
 // Description:     Component to create boxed content containers
 //
-// Component:       `uk-card`
+// Component:       `ui-card`
 //
-// Sub-objects:     `uk-card-body`
-//                  `uk-card-header`
-//                  `uk-card-footer`
-//                  `uk-card-media-*`
-//                  `uk-card-title`
-//                  `uk-card-badge`
+// Sub-objects:     `ui-card-body`
+//                  `ui-card-header`
+//                  `ui-card-footer`
+//                  `ui-card-media-*`
+//                  `ui-card-title`
+//                  `ui-card-badge`
 //
-// Modifiers:       `uk-card-hover`
-//                  `uk-card-default`
-//                  `uk-card-primary`
-//                  `uk-card-secondary`
-//                  `uk-card-small`
-//                  `uk-card-large`
+// Modifiers:       `ui-card-hover`
+//                  `ui-card-default`
+//                  `ui-card-primary`
+//                  `ui-card-secondary`
+//                  `ui-card-small`
+//                  `ui-card-large`
 //
-// Uses:            `uk-grid-stack`
+// Uses:            `ui-grid-stack`
 //
 // ========================================================================
 
@@ -87,7 +87,7 @@
    Component: Card
  ========================================================================== */
 
-.uk-card {
+.ui-card {
     position: relative;
     box-sizing: border-box;
     .hook-card;
@@ -97,17 +97,17 @@
 /* Sections
  ========================================================================== */
 
-.uk-card-body {
+.ui-card-body {
     padding: @card-body-padding-vertical @card-body-padding-horizontal;
     .hook-card-body;
 }
 
-.uk-card-header {
+.ui-card-header {
     padding: @card-header-padding-vertical @card-header-padding-horizontal;
     .hook-card-header;
 }
 
-.uk-card-footer {
+.ui-card-footer {
     padding: @card-footer-padding-vertical @card-footer-padding-horizontal;
     .hook-card-footer;
 }
@@ -115,11 +115,11 @@
 /* Desktop and bigger */
 @media (min-width: @breakpoint-large) {
 
-    .uk-card-body { padding: @card-body-padding-vertical-l @card-body-padding-horizontal-l; }
+    .ui-card-body { padding: @card-body-padding-vertical-l @card-body-padding-horizontal-l; }
 
-    .uk-card-header { padding: @card-header-padding-vertical-l @card-header-padding-horizontal-l; }
+    .ui-card-header { padding: @card-header-padding-vertical-l @card-header-padding-horizontal-l; }
 
-    .uk-card-footer { padding: @card-footer-padding-vertical-l @card-footer-padding-horizontal-l; }
+    .ui-card-footer { padding: @card-footer-padding-vertical-l @card-footer-padding-horizontal-l; }
 
 }
 
@@ -127,27 +127,27 @@
  * Micro clearfix
  */
 
-.uk-card-body::before,
-.uk-card-body::after,
-.uk-card-header::before,
-.uk-card-header::after,
-.uk-card-footer::before,
-.uk-card-footer::after {
+.ui-card-body::before,
+.ui-card-body::after,
+.ui-card-header::before,
+.ui-card-header::after,
+.ui-card-footer::before,
+.ui-card-footer::after {
     content: "";
     display: table;
 }
 
-.uk-card-body::after,
-.uk-card-header::after,
-.uk-card-footer::after { clear: both; }
+.ui-card-body::after,
+.ui-card-header::after,
+.ui-card-footer::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-card-body > :last-child,
-.uk-card-header > :last-child,
-.uk-card-footer > :last-child { margin-bottom: 0; }
+.ui-card-body > :last-child,
+.ui-card-header > :last-child,
+.ui-card-footer > :last-child { margin-bottom: 0; }
 
 
 /* Media
@@ -158,25 +158,25 @@
  * Implemented by the theme
  */
 
-[class*='uk-card-media'] {
+[class*='ui-card-media'] {
     .hook-card-media;
 }
 
-.uk-card-media-top,
-.uk-grid-stack > .uk-card-media-left,
-.uk-grid-stack > .uk-card-media-right  {
+.ui-card-media-top,
+.ui-grid-stack > .ui-card-media-left,
+.ui-grid-stack > .ui-card-media-right  {
     .hook-card-media-top;
 }
 
-.uk-card-media-bottom {
+.ui-card-media-bottom {
     .hook-card-media-bottom;
 }
 
-:not(.uk-grid-stack) > .uk-card-media-left {
+:not(.ui-grid-stack) > .ui-card-media-left {
     .hook-card-media-left;
 }
 
-:not(.uk-grid-stack) > .uk-card-media-right {
+:not(.ui-grid-stack) > .ui-card-media-right {
     .hook-card-media-right;
 }
 
@@ -184,7 +184,7 @@
 /* Title
  ========================================================================== */
 
-.uk-card-title {
+.ui-card-title {
     font-size: @card-title-font-size;
     line-height: @card-title-line-height;
     .hook-card-title;
@@ -194,7 +194,7 @@
 /* Badge
  ========================================================================== */
 
-.uk-card-badge {
+.ui-card-badge {
     position: absolute;
     top: @card-badge-top;
     right: @card-badge-right;
@@ -206,13 +206,13 @@
  * Remove margin from adjacent element
  */
 
-.uk-card-badge:first-child + * { margin-top: 0; }
+.ui-card-badge:first-child + * { margin-top: 0; }
 
 
 /* Hover modifier
  ========================================================================== */
 
-.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+.ui-card-hover:not(.ui-card-default):not(.ui-card-primary):not(.ui-card-secondary):hover {
     background: @card-hover-background;
     .hook-card-hover;
 }
@@ -226,27 +226,27 @@
  * Note: Header and Footer are only implemented for the default style
  */
 
-.uk-card-default {
+.ui-card-default {
     background: @card-default-background;
     color: @card-default-color;
     .hook-card-default;
 }
 
-.uk-card-default .uk-card-title {
+.ui-card-default .ui-card-title {
     color: @card-default-title-color;
     .hook-card-default-title;
 }
 
-.uk-card-default.uk-card-hover:hover {
+.ui-card-default.ui-card-hover:hover {
     background-color: @card-default-hover-background;
     .hook-card-default-hover;
 }
 
-.uk-card-default .uk-card-header {
+.ui-card-default .ui-card-header {
     .hook-card-default-header;
 }
 
-.uk-card-default .uk-card-footer {
+.ui-card-default .ui-card-footer {
     .hook-card-default-footer;
 }
 
@@ -254,53 +254,53 @@
  * Primary
  */
 
-.uk-card-primary {
+.ui-card-primary {
     background: @card-primary-background;
     color: @card-primary-color;
     .hook-card-primary;
 }
 
-.uk-card-primary .uk-card-title {
+.ui-card-primary .ui-card-title {
     color: @card-primary-title-color;
     .hook-card-primary-title;
 }
 
-.uk-card-primary.uk-card-hover:hover {
+.ui-card-primary.ui-card-hover:hover {
     background-color: @card-primary-hover-background;
     .hook-card-primary-hover;
 }
 
 // Color Mode
-.uk-card-primary.uk-card-body:extend(.uk-light all) when (@card-primary-color-mode = light) {}
-.uk-card-primary > :not([class*='uk-card-media']):extend(.uk-light all) when (@card-primary-color-mode = light) {}
-.uk-card-primary.uk-card-body:extend(.uk-dark all) when (@card-primary-color-mode = dark) {}
-.uk-card-primary > :not([class*='uk-card-media']):extend(.uk-dark all) when (@card-primary-color-mode = dark) {}
+.ui-card-primary.ui-card-body:extend(.ui-light all) when (@card-primary-color-mode = light) {}
+.ui-card-primary > :not([class*='ui-card-media']):extend(.ui-light all) when (@card-primary-color-mode = light) {}
+.ui-card-primary.ui-card-body:extend(.ui-dark all) when (@card-primary-color-mode = dark) {}
+.ui-card-primary > :not([class*='ui-card-media']):extend(.ui-dark all) when (@card-primary-color-mode = dark) {}
 
 /*
  * Secondary
  */
 
-.uk-card-secondary {
+.ui-card-secondary {
     background: @card-secondary-background;
     color: @card-secondary-color;
     .hook-card-secondary;
 }
 
-.uk-card-secondary .uk-card-title {
+.ui-card-secondary .ui-card-title {
     color: @card-secondary-title-color;
     .hook-card-secondary-title;
 }
 
-.uk-card-secondary.uk-card-hover:hover {
+.ui-card-secondary.ui-card-hover:hover {
     background-color: @card-secondary-hover-background;
     .hook-card-secondary-hover;
 }
 
 // Color Mode
-.uk-card-secondary.uk-card-body:extend(.uk-light all) when (@card-secondary-color-mode = light) {}
-.uk-card-secondary > :not([class*='uk-card-media']):extend(.uk-light all) when (@card-secondary-color-mode = light) {}
-.uk-card-secondary.uk-card-body:extend(.uk-dark all) when (@card-secondary-color-mode = dark) {}
-.uk-card-secondary > :not([class*='uk-card-media']):extend(.uk-dark all) when (@card-secondary-color-mode = dark) {}
+.ui-card-secondary.ui-card-body:extend(.ui-light all) when (@card-secondary-color-mode = light) {}
+.ui-card-secondary > :not([class*='ui-card-media']):extend(.ui-light all) when (@card-secondary-color-mode = light) {}
+.ui-card-secondary.ui-card-body:extend(.ui-dark all) when (@card-secondary-color-mode = dark) {}
+.ui-card-secondary > :not([class*='ui-card-media']):extend(.ui-dark all) when (@card-secondary-color-mode = dark) {}
 
 
 /* Size modifier
@@ -310,11 +310,11 @@
  * Small
  */
 
-.uk-card-small.uk-card-body,
-.uk-card-small .uk-card-body { padding: @card-small-body-padding-vertical @card-small-body-padding-horizontal; }
+.ui-card-small.ui-card-body,
+.ui-card-small .ui-card-body { padding: @card-small-body-padding-vertical @card-small-body-padding-horizontal; }
 
-.uk-card-small .uk-card-header { padding: @card-small-header-padding-vertical @card-small-header-padding-horizontal; }
-.uk-card-small .uk-card-footer { padding: @card-small-footer-padding-vertical @card-small-footer-padding-horizontal; }
+.ui-card-small .ui-card-header { padding: @card-small-header-padding-vertical @card-small-header-padding-horizontal; }
+.ui-card-small .ui-card-footer { padding: @card-small-footer-padding-vertical @card-small-footer-padding-horizontal; }
 
 /*
  * Large
@@ -323,11 +323,11 @@
 /* Desktop and bigger */
 @media (min-width: @breakpoint-large) {
 
-    .uk-card-large.uk-card-body,
-    .uk-card-large .uk-card-body { padding: @card-large-body-padding-vertical-l @card-large-body-padding-horizontal-l; }
+    .ui-card-large.ui-card-body,
+    .ui-card-large .ui-card-body { padding: @card-large-body-padding-vertical-l @card-large-body-padding-horizontal-l; }
 
-    .uk-card-large .uk-card-header { padding: @card-large-header-padding-vertical-l @card-large-header-padding-horizontal-l; }
-    .uk-card-large .uk-card-footer { padding: @card-large-footer-padding-vertical-l @card-large-footer-padding-horizontal-l; }
+    .ui-card-large .ui-card-header { padding: @card-large-header-padding-vertical-l @card-large-header-padding-horizontal-l; }
+    .ui-card-large .ui-card-footer { padding: @card-large-footer-padding-vertical-l @card-large-footer-padding-horizontal-l; }
 
 }
 

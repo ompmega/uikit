@@ -15,8 +15,8 @@ export default {
     data: {
         target: null,
         selActive: false,
-        attrItem: 'uk-filter-control',
-        cls: 'uk-active',
+        attrItem: 'ui-filter-control',
+        cls: 'ui-active',
         animation: 250
     },
 

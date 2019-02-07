@@ -1,9 +1,9 @@
 // Name:            Breadcrumb
 // Description:     Component to create a breadcrumb navigation
 //
-// Component:       `uk-breadcrumb`
+// Component:       `ui-breadcrumb`
 //
-// States:          `uk-disabled`
+// States:          `ui-disabled`
 //
 // ========================================================================
 
@@ -31,7 +31,7 @@ $breadcrumb-divider-color:                           $global-muted-color !defaul
  * 2. Reset list
  */
 
-.uk-breadcrumb {
+.ui-breadcrumb {
     display: flex;
     /* 1 */
     flex-wrap: wrap;
@@ -45,13 +45,13 @@ $breadcrumb-divider-color:                           $global-muted-color !defaul
  * Space is allocated solely based on content dimensions: 0 0 auto
  */
 
-.uk-breadcrumb > * { flex: none; }
+.ui-breadcrumb > * { flex: none; }
 
 
 /* Items
  ========================================================================== */
 
-.uk-breadcrumb > * > * {
+.ui-breadcrumb > * > * {
     display: inline-block;
     font-size: $breadcrumb-item-font-size;
     color: $breadcrumb-item-color;
@@ -59,20 +59,20 @@ $breadcrumb-divider-color:                           $global-muted-color !defaul
 }
 
 /* Hover + Focus */
-.uk-breadcrumb > * > :hover,
-.uk-breadcrumb > * > :focus {
+.ui-breadcrumb > * > :hover,
+.ui-breadcrumb > * > :focus {
     color: $breadcrumb-item-hover-color;
     text-decoration: $breadcrumb-item-hover-text-decoration;
     @if(mixin-exists(hook-breadcrumb-item-hover)) {@include hook-breadcrumb-item-hover();}
 }
 
 /* Disabled */
-.uk-breadcrumb > .uk-disabled > * {
+.ui-breadcrumb > .ui-disabled > * {
     @if(mixin-exists(hook-breadcrumb-item-disabled)) {@include hook-breadcrumb-item-disabled();}
 }
 
 /* Active */
-.uk-breadcrumb > :last-child > * {
+.ui-breadcrumb > :last-child > * {
     color: $breadcrumb-item-active-color;
     @if(mixin-exists(hook-breadcrumb-item-active)) {@include hook-breadcrumb-item-active();}
 }
@@ -82,7 +82,7 @@ $breadcrumb-divider-color:                           $global-muted-color !defaul
  * `nth-child` makes it also work without JS if it's only one row
  */
 
-.uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
+.ui-breadcrumb > :nth-child(n+2):not(.ui-first-column)::before {
     content: $breadcrumb-divider;
     display: inline-block;
     margin: 0 $breadcrumb-divider-margin-horizontal;

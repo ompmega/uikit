@@ -1,11 +1,11 @@
 // Name:            Iconnav
 // Description:     Component to create icon navigations
 //
-// Component:       `uk-iconnav`
+// Component:       `ui-iconnav`
 //
-// Modifier:        `uk-iconnav-vertical`
+// Modifier:        `ui-iconnav-vertical`
 //
-// States:          `uk-active`
+// States:          `ui-active`
 //
 // ========================================================================
 
@@ -33,7 +33,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 3. Gutter
  */
 
-.uk-iconnav {
+.ui-iconnav {
     display: flex;
     /* 1 */
     flex-wrap: wrap;
@@ -51,7 +51,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 1. Gutter
  */
 
-.uk-iconnav > * {
+.ui-iconnav > * {
     /* 1 */
     padding-left: $iconnav-margin-horizontal;
 }
@@ -66,7 +66,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 2. Style
  */
 
-.uk-iconnav > * > a {
+.ui-iconnav > * > a {
     /* 1 */
     display: block;
     /* 2 */
@@ -75,21 +75,21 @@ $iconnav-item-active-color:                       $global-color !default;
 }
 
 /* Hover + Focus */
-.uk-iconnav > * > a:hover,
-.uk-iconnav > * > a:focus {
+.ui-iconnav > * > a:hover,
+.ui-iconnav > * > a:focus {
     color: $iconnav-item-hover-color;
     outline: none;
     @if(mixin-exists(hook-iconnav-item-hover)) {@include hook-iconnav-item-hover();}
 }
 
 /* Active */
-.uk-iconnav > .uk-active > a {
+.ui-iconnav > .ui-active > a {
     color: $iconnav-item-active-color;
     @if(mixin-exists(hook-iconnav-item-active)) {@include hook-iconnav-item-active();}
 }
 
 
-/* Modifier: 'uk-iconnav-vertical'
+/* Modifier: 'ui-iconnav-vertical'
  ========================================================================== */
 
 /*
@@ -97,7 +97,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 2. Gutter
  */
 
-.uk-iconnav-vertical {
+.ui-iconnav-vertical {
     /* 1 */
     flex-direction: column;
     /* 2 */
@@ -106,7 +106,7 @@ $iconnav-item-active-color:                       $global-color !default;
 }
 
 /* 2 */
-.uk-iconnav-vertical > * {
+.ui-iconnav-vertical > * {
     padding-left: 0;
     padding-top: $iconnav-margin-vertical;
 }

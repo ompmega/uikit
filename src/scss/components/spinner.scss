@@ -1,7 +1,7 @@
 // Name:            Spinner
 // Description:     Component to create a loading spinner
 //
-// Component:       `uk-spinner`
+// Component:       `ui-spinner`
 //
 // ========================================================================
 
@@ -21,10 +21,10 @@ $spinner-duration:                               1.4s !default;
  ========================================================================== */
 
 /*
- * Adopts `uk-icon`
+ * Adopts `ui-icon`
  */
 
-.uk-spinner {
+.ui-spinner {
     @if(mixin-exists(hook-spinner)) {@include hook-spinner();}
 }
 
@@ -32,9 +32,9 @@ $spinner-duration:                               1.4s !default;
 /* SVG
  ========================================================================== */
 
-.uk-spinner > * { animation: uk-spinner-rotate $spinner-duration linear infinite; }
+.ui-spinner > * { animation: ui-spinner-rotate $spinner-duration linear infinite; }
 
-@keyframes uk-spinner-rotate {
+@keyframes ui-spinner-rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(270deg); }
 }
@@ -43,16 +43,16 @@ $spinner-duration:                               1.4s !default;
  * Circle
  */
 
-.uk-spinner > * > * {
+.ui-spinner > * > * {
     stroke-dasharray: $spinner-circumference;
     stroke-dashoffset: 0;
     transform-origin: center;
-    animation: uk-spinner-dash $spinner-duration ease-in-out infinite;
+    animation: ui-spinner-dash $spinner-duration ease-in-out infinite;
     stroke-width: $spinner-stroke-width;
     stroke-linecap: round;
 }
 
-@keyframes uk-spinner-dash {
+@keyframes ui-spinner-dash {
     0% { stroke-dashoffset: $spinner-circumference; }
     50% {
         stroke-dashoffset: $spinner-circumference/4;

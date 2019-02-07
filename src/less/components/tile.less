@@ -1,18 +1,18 @@
 // Name:            Tile
 // Description:     Component to create tiled boxes
 //
-// Component:       `uk-tile`
+// Component:       `ui-tile`
 //
-// Modifiers:       `uk-tile-xsmall`
-//                  `uk-tile-small`
-//                  `uk-tile-large`
-//                  `uk-tile-xlarge`
-//                  `uk-tile-default`
-//                  `uk-tile-muted`
-//                  `uk-tile-primary`
-//                  `uk-tile-secondary`
+// Modifiers:       `ui-tile-xsmall`
+//                  `ui-tile-small`
+//                  `ui-tile-large`
+//                  `ui-tile-xlarge`
+//                  `ui-tile-default`
+//                  `ui-tile-muted`
+//                  `ui-tile-primary`
+//                  `ui-tile-secondary`
 //
-// States:          `uk-preserve-color`
+// States:          `ui-preserve-color`
 //
 // ========================================================================
 
@@ -51,7 +51,7 @@
    Component: Tile
  ========================================================================== */
 
-.uk-tile {
+.ui-tile {
     position: relative;
     box-sizing: border-box;
     padding-left: @tile-padding-horizontal;
@@ -64,7 +64,7 @@
 /* Phone landscape and bigger */
 @media (min-width: @breakpoint-small) {
 
-    .uk-tile {
+    .ui-tile {
         padding-left: @tile-padding-horizontal-s;
         padding-right: @tile-padding-horizontal-s;
     }
@@ -74,7 +74,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-tile {
+    .ui-tile {
         padding-left: @tile-padding-horizontal-m;
         padding-right: @tile-padding-horizontal-m;
         padding-top: @tile-padding-vertical-m;
@@ -87,19 +87,19 @@
  * Micro clearfix
  */
 
-.uk-tile::before,
-.uk-tile::after {
+.ui-tile::before,
+.ui-tile::after {
     content: "";
     display: table;
 }
 
-.uk-tile::after { clear: both; }
+.ui-tile::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-tile > :last-child { margin-bottom: 0; }
+.ui-tile > :last-child { margin-bottom: 0; }
 
 
 /* Size modifiers
@@ -109,7 +109,7 @@
  * XSmall
  */
 
-.uk-tile-xsmall {
+.ui-tile-xsmall {
     padding-top: @tile-xsmall-padding-vertical;
     padding-bottom: @tile-xsmall-padding-vertical;
 }
@@ -118,7 +118,7 @@
  * Small
  */
 
-.uk-tile-small {
+.ui-tile-small {
     padding-top: @tile-small-padding-vertical;
     padding-bottom: @tile-small-padding-vertical;
 }
@@ -127,7 +127,7 @@
  * Large
  */
 
-.uk-tile-large {
+.ui-tile-large {
     padding-top: @tile-large-padding-vertical;
     padding-bottom: @tile-large-padding-vertical;
 }
@@ -135,7 +135,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-tile-large {
+    .ui-tile-large {
         padding-top: @tile-large-padding-vertical-m;
         padding-bottom: @tile-large-padding-vertical-m;
     }
@@ -147,7 +147,7 @@
  * XLarge
  */
 
-.uk-tile-xlarge {
+.ui-tile-xlarge {
     padding-top: @tile-xlarge-padding-vertical;
     padding-bottom: @tile-xlarge-padding-vertical;
 }
@@ -155,7 +155,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-tile-xlarge {
+    .ui-tile-xlarge {
         padding-top: @tile-xlarge-padding-vertical-m;
         padding-bottom: @tile-xlarge-padding-vertical-m;
     }
@@ -170,7 +170,7 @@
  * Default
  */
 
-.uk-tile-default {
+.ui-tile-default {
     background: @tile-default-background;
     .hook-tile-default;
 }
@@ -179,7 +179,7 @@
  * Muted
  */
 
-.uk-tile-muted {
+.ui-tile-muted {
     background: @tile-muted-background;
     .hook-tile-muted;
 }
@@ -188,27 +188,27 @@
  * Primary
  */
 
-.uk-tile-primary {
+.ui-tile-primary {
     background: @tile-primary-background;
     .hook-tile-primary;
 }
 
 // Color Mode
-.uk-tile-primary:not(.uk-preserve-color):extend(.uk-light all) when (@tile-primary-color-mode = light) {}
-.uk-tile-primary:not(.uk-preserve-color):extend(.uk-dark all) when (@tile-primary-color-mode = dark) {}
+.ui-tile-primary:not(.ui-preserve-color):extend(.ui-light all) when (@tile-primary-color-mode = light) {}
+.ui-tile-primary:not(.ui-preserve-color):extend(.ui-dark all) when (@tile-primary-color-mode = dark) {}
 
 /*
  * Secondary
  */
 
-.uk-tile-secondary {
+.ui-tile-secondary {
     background: @tile-secondary-background;
     .hook-tile-secondary;
 }
 
 // Color Mode
-.uk-tile-secondary:not(.uk-preserve-color):extend(.uk-light all) when (@tile-secondary-color-mode = light) {}
-.uk-tile-secondary:not(.uk-preserve-color):extend(.uk-dark all) when (@tile-secondary-color-mode = dark) {}
+.ui-tile-secondary:not(.ui-preserve-color):extend(.ui-light all) when (@tile-secondary-color-mode = light) {}
+.ui-tile-secondary:not(.ui-preserve-color):extend(.ui-dark all) when (@tile-secondary-color-mode = dark) {}
 
 
 // Hooks

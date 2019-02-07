@@ -21,7 +21,7 @@ export default {
 
     data: {
         allow: false,
-        clsDragover: 'uk-dragover',
+        clsDragover: 'ui-dragover',
         concurrent: 1,
         maxSize: 0,
         method: 'POST',

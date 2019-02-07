@@ -18,9 +18,9 @@ export default {
         ratio: '16:9',
         minHeight: false,
         maxHeight: false,
-        selList: '.uk-slideshow-items',
-        attrItem: 'uk-slideshow-item',
-        selNav: '.uk-slideshow-nav',
+        selList: '.ui-slideshow-items',
+        attrItem: 'ui-slideshow-item',
+        selNav: '.ui-slideshow-nav',
         Animations
     },
 

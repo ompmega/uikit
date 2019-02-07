@@ -22,7 +22,7 @@ export default {
         offsetLeft: 0,
         repeat: false,
         delay: 0,
-        inViewClass: 'uk-scrollspy-inview'
+        inViewClass: 'ui-scrollspy-inview'
     }),
 
     computed: {
@@ -58,7 +58,7 @@ export default {
                     let elData = els[i];
 
                     if (!elData || elData.el !== el) {
-                        const cls = data(el, 'uk-scrollspy-class');
+                        const cls = data(el, 'ui-scrollspy-class');
                         elData = {el, toggles: cls && cls.split(',') || this.cls};
                     }
 

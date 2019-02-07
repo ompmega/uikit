@@ -8,9 +8,9 @@ export default {
     mixins: [Modal],
 
     data: {
-        clsPage: 'uk-modal-page',
-        selPanel: '.uk-modal-dialog',
-        selClose: '.uk-modal-close, .uk-modal-close-default, .uk-modal-close-outside, .uk-modal-close-full'
+        clsPage: 'ui-modal-page',
+        selPanel: '.ui-modal-dialog',
+        selClose: '.ui-modal-close, .ui-modal-close-default, .ui-modal-close-outside, .ui-modal-close-full'
     },
 
     events: [
@@ -22,8 +22,8 @@ export default {
 
             handler() {
 
-                if (hasClass(this.panel, 'uk-margin-auto-vertical')) {
-                    addClass(this.$el, 'uk-flex');
+                if (hasClass(this.panel, 'ui-margin-auto-vertical')) {
+                    addClass(this.$el, 'ui-flex');
                 } else {
                     css(this.$el, 'display', 'block');
                 }
@@ -40,7 +40,7 @@ export default {
             handler() {
 
                 css(this.$el, 'display', '');
-                removeClass(this.$el, 'uk-flex');
+                removeClass(this.$el, 'ui-flex');
 
             }
         }
@@ -54,8 +54,8 @@ function install (UIkit) {
     UIkit.modal.dialog = function (content, options) {
 
         const dialog = UIkit.modal(`
-            <div class="uk-modal">
-                <div class="uk-modal-dialog">${content}</div>
+            <div class="ui-modal">
+                <div class="ui-modal-dialog">${content}</div>
              </div>
         `, options);
 
@@ -76,9 +76,9 @@ function install (UIkit) {
 
         return new Promise(
             resolve => on(UIkit.modal.dialog(`
-                <div class="uk-modal-body">${isString(message) ? message : html(message)}</div>
-                <div class="uk-modal-footer uk-text-right">
-                    <button class="uk-button uk-button-primary uk-modal-close" autofocus>${options.labels.ok}</button>
+                <div class="ui-modal-body">${isString(message) ? message : html(message)}</div>
+                <div class="ui-modal-footer ui-text-right">
+                    <button class="ui-button ui-button-primary ui-modal-close" autofocus>${options.labels.ok}</button>
                 </div>
             `, options).$el, 'hide', resolve)
         );
@@ -92,10 +92,10 @@ function install (UIkit) {
 
             const confirm = UIkit.modal.dialog(`
                 <form>
-                    <div class="uk-modal-body">${isString(message) ? message : html(message)}</div>
-                    <div class="uk-modal-footer uk-text-right">
-                        <button class="uk-button uk-button-default uk-modal-close" type="button">${options.labels.cancel}</button>
-                        <button class="uk-button uk-button-primary" autofocus>${options.labels.ok}</button>
+                    <div class="ui-modal-body">${isString(message) ? message : html(message)}</div>
+                    <div class="ui-modal-footer ui-text-right">
+                        <button class="ui-button ui-button-default ui-modal-close" type="button">${options.labels.cancel}</button>
+                        <button class="ui-button ui-button-primary" autofocus>${options.labels.ok}</button>
                     </div>
                 </form>
             `, options);
@@ -124,14 +124,14 @@ function install (UIkit) {
         return new Promise(resolve => {
 
             const prompt = UIkit.modal.dialog(`
-                    <form class="uk-form-stacked">
-                        <div class="uk-modal-body">
+                    <form class="ui-form-stacked">
+                        <div class="ui-modal-body">
                             <label>${isString(message) ? message : html(message)}</label>
-                            <input class="uk-input" autofocus>
+                            <input class="ui-input" autofocus>
                         </div>
-                        <div class="uk-modal-footer uk-text-right">
-                            <button class="uk-button uk-button-default uk-modal-close" type="button">${options.labels.cancel}</button>
-                            <button class="uk-button uk-button-primary">${options.labels.ok}</button>
+                        <div class="ui-modal-footer ui-text-right">
+                            <button class="ui-button ui-button-default ui-modal-close" type="button">${options.labels.cancel}</button>
+                            <button class="ui-button ui-button-primary">${options.labels.ok}</button>
                         </div>
                     </form>
                 `, options),

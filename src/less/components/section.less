@@ -1,19 +1,19 @@
 // Name:            Section
 // Description:     Component to create horizontal layout section
 //
-// Component:       `uk-section`
+// Component:       `ui-section`
 //
-// Modifiers:       `uk-section-xsmall`
-//                  `uk-section-small`
-//                  `uk-section-large`
-//                  `uk-section-xlarge`
-//                  `uk-section-default`
-//                  `uk-section-muted`
-//                  `uk-section-primary`
-//                  `uk-section-secondary`
-//                  `uk-section-overlap`
+// Modifiers:       `ui-section-xsmall`
+//                  `ui-section-small`
+//                  `ui-section-large`
+//                  `ui-section-xlarge`
+//                  `ui-section-default`
+//                  `ui-section-muted`
+//                  `ui-section-primary`
+//                  `ui-section-secondary`
+//                  `ui-section-overlap`
 //
-// States:          `uk-preserve-color`
+// States:          `ui-preserve-color`
 //
 // ========================================================================
 
@@ -53,7 +53,7 @@
  * 1. Make it work with `100vh` and height in general
  */
 
-.uk-section {
+.ui-section {
     box-sizing: border-box; /* 1 */
     padding-top: @section-padding-vertical;
     padding-bottom: @section-padding-vertical;
@@ -63,7 +63,7 @@
 /* Desktop and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-section {
+    .ui-section {
         padding-top: @section-padding-vertical-m;
         padding-bottom: @section-padding-vertical-m;
     }
@@ -74,19 +74,19 @@
  * Micro clearfix
  */
 
-.uk-section::before,
-.uk-section::after {
+.ui-section::before,
+.ui-section::after {
     content: "";
     display: table;
 }
 
-.uk-section::after { clear: both; }
+.ui-section::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-section > :last-child { margin-bottom: 0; }
+.ui-section > :last-child { margin-bottom: 0; }
 
 
 /* Size modifiers
@@ -96,7 +96,7 @@
  * XSmall
  */
 
-.uk-section-xsmall {
+.ui-section-xsmall {
     padding-top: @section-xsmall-padding-vertical;
     padding-bottom: @section-xsmall-padding-vertical;
 }
@@ -105,7 +105,7 @@
  * Small
  */
 
-.uk-section-small {
+.ui-section-small {
     padding-top: @section-small-padding-vertical;
     padding-bottom: @section-small-padding-vertical;
 }
@@ -114,7 +114,7 @@
  * Large
  */
 
-.uk-section-large {
+.ui-section-large {
     padding-top: @section-large-padding-vertical;
     padding-bottom: @section-large-padding-vertical;
 }
@@ -122,7 +122,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-section-large {
+    .ui-section-large {
         padding-top: @section-large-padding-vertical-m;
         padding-bottom: @section-large-padding-vertical-m;
     }
@@ -134,7 +134,7 @@
  * XLarge
  */
 
-.uk-section-xlarge {
+.ui-section-xlarge {
     padding-top: @section-xlarge-padding-vertical;
     padding-bottom: @section-xlarge-padding-vertical;
 }
@@ -142,7 +142,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-section-xlarge {
+    .ui-section-xlarge {
         padding-top: @section-xlarge-padding-vertical-m;
         padding-bottom: @section-xlarge-padding-vertical-m;
     }
@@ -157,7 +157,7 @@
  * Default
  */
 
-.uk-section-default {
+.ui-section-default {
     background: @section-default-background;
     .hook-section-default;
 }
@@ -166,7 +166,7 @@
  * Muted
  */
 
-.uk-section-muted {
+.ui-section-muted {
     background: @section-muted-background;
     .hook-section-muted;
 }
@@ -175,26 +175,26 @@
  * Primary
  */
 
-.uk-section-primary {
+.ui-section-primary {
     background: @section-primary-background;
     .hook-section-primary;
 }
 
-.uk-section-primary:not(.uk-preserve-color):extend(.uk-light all) when (@section-primary-color-mode = light) {}
-.uk-section-primary:not(.uk-preserve-color):extend(.uk-dark all) when (@section-primary-color-mode = dark) {}
+.ui-section-primary:not(.ui-preserve-color):extend(.ui-light all) when (@section-primary-color-mode = light) {}
+.ui-section-primary:not(.ui-preserve-color):extend(.ui-dark all) when (@section-primary-color-mode = dark) {}
 
 
 /*
  * Secondary
  */
 
-.uk-section-secondary {
+.ui-section-secondary {
     background: @section-secondary-background;
     .hook-section-secondary;
 }
 
-.uk-section-secondary:not(.uk-preserve-color):extend(.uk-light all) when (@section-secondary-color-mode = light) {}
-.uk-section-secondary:not(.uk-preserve-color):extend(.uk-dark all) when (@section-secondary-color-mode = dark) {}
+.ui-section-secondary:not(.ui-preserve-color):extend(.ui-light all) when (@section-secondary-color-mode = light) {}
+.ui-section-secondary:not(.ui-preserve-color):extend(.ui-dark all) when (@section-secondary-color-mode = dark) {}
 
 
 /* Overlap modifier
@@ -205,7 +205,7 @@
  * Implemented by the theme
  */
 
-.uk-section-overlap {
+.ui-section-overlap {
     .hook-section-overlap;
 }
 

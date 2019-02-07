@@ -26,7 +26,7 @@ export default {
 
     connected() {
 
-        this.class += ' uk-svg';
+        this.class += ' ui-svg';
 
         if (!this.icon && includes(this.src, '#')) {
 

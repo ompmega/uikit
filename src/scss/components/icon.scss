@@ -1,13 +1,13 @@
 // Name:            Icon
 // Description:     Component to create icons
 //
-// Component:       `uk-icon`
+// Component:       `ui-icon`
 //
-// Modifiers:       `uk-icon-image`
-//                  `uk-icon-link`
-//                  `uk-icon-button`
+// Modifiers:       `ui-icon-image`
+//                  `ui-icon-link`
+//                  `ui-icon-button`
 //
-// States:          `uk-preserve`
+// States:          `ui-preserve`
 //
 // ========================================================================
 
@@ -51,7 +51,7 @@ $icon-button-active-color:                       $global-color !default;
  * 10. Let the container fit the height of the icon
  */
 
-.uk-icon {
+.ui-icon {
     /* 1 */
     margin: 0;
     /* 2 */
@@ -77,13 +77,13 @@ $icon-button-active-color:                       $global-color !default;
 }
 
 /* Required for `button`. */
-button.uk-icon:not(:disabled) { cursor: pointer; }
+button.ui-icon:not(:disabled) { cursor: pointer; }
 
 /*
  * Remove the inner border and padding in Firefox.
  */
 
-.uk-icon::-moz-focus-inner {
+.ui-icon::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -92,14 +92,14 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * Set the fill and stroke color of all SVG elements to the current text color
  */
 
-.uk-icon:not(.uk-preserve) [fill*='#']:not(.uk-preserve) { fill: currentcolor; }
-.uk-icon:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) { stroke: currentcolor; }
+.ui-icon:not(.ui-preserve) [fill*='#']:not(.ui-preserve) { fill: currentcolor; }
+.ui-icon:not(.ui-preserve) [stroke*='#']:not(.ui-preserve) { stroke: currentcolor; }
 
 /*
  * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
  */
 
-.uk-icon > * { transform: translate(0,0); }
+.ui-icon > * { transform: translate(0,0); }
 
 
 /* Image modifier
@@ -109,7 +109,7 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * Display images in icon dimensions
  */
 
-.uk-icon-image {
+.ui-icon-image {
     width: $icon-image-size;
     height: $icon-image-size;
     background-position: 50% 50%;
@@ -126,21 +126,21 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * Link
  */
 
-.uk-icon-link {
+.ui-icon-link {
     color: $icon-link-color;
     @if(mixin-exists(hook-icon-link)) {@include hook-icon-link();}
 }
 
-.uk-icon-link:hover,
-.uk-icon-link:focus {
+.ui-icon-link:hover,
+.ui-icon-link:focus {
     color: $icon-link-hover-color;
     outline: none;
     @if(mixin-exists(hook-icon-link-hover)) {@include hook-icon-link-hover();}
 }
 
 /* OnClick + Active */
-.uk-icon-link:active,
-.uk-active > .uk-icon-link {
+.ui-icon-link:active,
+.ui-active > .ui-icon-link {
     color: $icon-link-active-color;
     @if(mixin-exists(hook-icon-link-active)) {@include hook-icon-link-active();}
 }
@@ -150,7 +150,7 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * 1. Center icon vertically and horizontally
  */
 
-.uk-icon-button {
+.ui-icon-button {
     box-sizing: border-box;
     width: $icon-button-size;
     height: $icon-button-size;
@@ -166,8 +166,8 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
 }
 
 /* Hover + Focus */
-.uk-icon-button:hover,
-.uk-icon-button:focus {
+.ui-icon-button:hover,
+.ui-icon-button:focus {
     background-color: $icon-button-hover-background;
     color: $icon-button-hover-color;
     outline: none;
@@ -175,8 +175,8 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
 }
 
 /* OnClick + Active */
-.uk-icon-button:active,
-.uk-active > .uk-icon-button {
+.ui-icon-button:active,
+.ui-active > .ui-icon-button {
     background-color: $icon-button-active-background;
     color: $icon-button-active-color;
     @if(mixin-exists(hook-icon-button-active)) {@include hook-icon-button-active();}

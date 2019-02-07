@@ -12,8 +12,8 @@ export default {
 
     data: {
         fill: '',
-        clsWrapper: 'uk-leader-fill',
-        clsHide: 'uk-leader-hide',
+        clsWrapper: 'ui-leader-fill',
+        clsHide: 'ui-leader-hide',
         attrFill: 'data-fill'
     },
 

@@ -23,22 +23,22 @@ export default {
         videoAutoplay: false,
         delayControls: 3000,
         items: [],
-        cls: 'uk-open',
-        clsPage: 'uk-lightbox-page',
-        selList: '.uk-lightbox-items',
-        attrItem: 'uk-lightbox-item',
-        selClose: '.uk-close-large',
+        cls: 'ui-open',
+        clsPage: 'ui-lightbox-page',
+        selList: '.ui-lightbox-items',
+        attrItem: 'ui-lightbox-item',
+        selClose: '.ui-close-large',
         pauseOnHover: false,
         velocity: 2,
         Animations,
-        template: `<div class="uk-lightbox uk-overflow-hidden">
-                        <ul class="uk-lightbox-items"></ul>
-                        <div class="uk-lightbox-toolbar uk-position-top uk-text-right uk-transition-slide-top uk-transition-opaque">
-                            <button class="uk-lightbox-toolbar-icon uk-close-large" type="button" uk-close></button>
+        template: `<div class="ui-lightbox ui-overflow-hidden">
+                        <ul class="ui-lightbox-items"></ul>
+                        <div class="ui-lightbox-toolbar ui-position-top ui-text-right ui-transition-slide-top ui-transition-opaque">
+                            <button class="ui-lightbox-toolbar-icon ui-close-large" type="button" ui-close></button>
                          </div>
-                        <a class="uk-lightbox-button uk-position-center-left uk-position-medium uk-transition-fade" href="#" uk-slidenav-previous uk-lightbox-item="previous"></a>
-                        <a class="uk-lightbox-button uk-position-center-right uk-position-medium uk-transition-fade" href="#" uk-slidenav-next uk-lightbox-item="next"></a>
-                        <div class="uk-lightbox-toolbar uk-lightbox-caption uk-position-bottom uk-text-center uk-transition-slide-bottom uk-transition-opaque"></div>
+                        <a class="ui-lightbox-button ui-position-center-left ui-position-medium ui-transition-fade" href="#" ui-slidenav-previous ui-lightbox-item="previous"></a>
+                        <a class="ui-lightbox-button ui-position-center-right ui-position-medium ui-transition-fade" href="#" ui-slidenav-next ui-lightbox-item="next"></a>
+                        <div class="ui-lightbox-toolbar ui-lightbox-caption ui-position-bottom ui-text-center ui-transition-slide-bottom ui-transition-opaque"></div>
                     </div>`
     }),
 
@@ -46,7 +46,7 @@ export default {
 
         this.$mount(append(this.container, this.template));
 
-        this.caption = $('.uk-lightbox-caption', this.$el);
+        this.caption = $('.ui-lightbox-caption', this.$el);
 
         this.items.forEach(() => append(this.list, '<li></li>'));
 
@@ -207,7 +207,7 @@ export default {
 
                 const {source, type, alt} = item;
 
-                this.setItem(item, '<span uk-spinner></span>');
+                this.setItem(item, '<span ui-spinner></span>');
 
                 if (!source) {
                     return;
@@ -226,7 +226,7 @@ export default {
                     // Video
                 } else if (type === 'video' || source.match(/\.(mp4|webm|ogv)($|\?)/i)) {
 
-                    const video = $(`<video controls playsinline${item.poster ? ` poster="${item.poster}"` : ''} uk-video="${this.videoAutoplay}"></video>`);
+                    const video = $(`<video controls playsinline${item.poster ? ` poster="${item.poster}"` : ''} ui-video="${this.videoAutoplay}"></video>`);
                     attr(video, 'src', source);
 
                     once(video, 'error loadedmetadata', type => {
@@ -241,7 +241,7 @@ export default {
                     // Iframe
                 } else if (type === 'iframe' || source.match(/\.(html|php)($|\?)/i)) {
 
-                    this.setItem(item, `<iframe class="uk-lightbox-iframe" src="${source}" frameborder="0" allowfullscreen></iframe>`);
+                    this.setItem(item, `<iframe class="ui-lightbox-iframe" src="${source}" frameborder="0" allowfullscreen></iframe>`);
 
                     // YouTube
                 } else if ((matches = source.match(/\/\/.*?youtube(-nocookie)?\.[a-z]+\/watch\?v=([^&\s]+)/) || source.match(/()youtu\.be\/(.*)/))) {
@@ -306,7 +306,7 @@ export default {
         },
 
         setError(item) {
-            this.setItem(item, '<span uk-icon="icon: bolt; ratio: 2"></span>');
+            this.setItem(item, '<span ui-icon="icon: bolt; ratio: 2"></span>');
         },
 
         showControls() {
@@ -314,12 +314,12 @@ export default {
             clearTimeout(this.controlsTimer);
             this.controlsTimer = setTimeout(this.hideControls, this.delayControls);
 
-            addClass(this.$el, 'uk-active', 'uk-transition-active');
+            addClass(this.$el, 'ui-active', 'ui-transition-active');
 
         },
 
         hideControls() {
-            removeClass(this.$el, 'uk-active', 'uk-transition-active');
+            removeClass(this.$el, 'ui-active', 'ui-transition-active');
         }
 
     }
@@ -327,5 +327,5 @@ export default {
 };
 
 function getIframe(src, width, height, autoplay) {
-    return `<iframe src="${src}" width="${width}" height="${height}" style="max-width: 100%; box-sizing: border-box;" frameborder="0" allowfullscreen uk-video="autoplay: ${autoplay}" uk-responsive></iframe>`;
+    return `<iframe src="${src}" width="${width}" height="${height}" style="max-width: 100%; box-sizing: border-box;" frameborder="0" allowfullscreen ui-video="autoplay: ${autoplay}" ui-responsive></iframe>`;
 }

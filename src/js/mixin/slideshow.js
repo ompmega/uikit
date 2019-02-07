@@ -13,7 +13,7 @@ export default {
 
     data: {
         animation: 'slide',
-        clsActivated: 'uk-transition-active',
+        clsActivated: 'ui-transition-active',
         Animations,
         Transitioner
     },

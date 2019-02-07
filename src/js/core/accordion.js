@@ -22,9 +22,9 @@ export default {
         animation: [true],
         collapsible: true,
         multiple: false,
-        clsOpen: 'uk-open',
-        toggle: '> .uk-accordion-title',
-        content: '> .uk-accordion-content',
+        clsOpen: 'ui-open',
+        toggle: '> .ui-accordion-title',
+        content: '> .ui-accordion-content',
         transition: 'ease'
     },
 

@@ -1,13 +1,13 @@
 // Name:            Slidenav
 // Description:     Component to create previous/next icon navigations
 //
-// Component:       `uk-slidenav`
+// Component:       `ui-slidenav`
 //
-// Sub-objects:     `uk-slidenav-container`
+// Sub-objects:     `ui-slidenav-container`
 //
-// Modifiers:       `uk-slidenav-previous`
-//                  `uk-slidenav-next`
-//                  `uk-slidenav-large`
+// Modifiers:       `ui-slidenav-previous`
+//                  `ui-slidenav-next`
+//                  `ui-slidenav-large`
 //
 // ========================================================================
 
@@ -31,25 +31,25 @@ $slidenav-large-padding-horizontal:              $slidenav-large-padding-vertica
  ========================================================================== */
 
 /*
- * Adopts `uk-icon`
+ * Adopts `ui-icon`
  */
 
-.uk-slidenav {
+.ui-slidenav {
     padding: $slidenav-padding-vertical $slidenav-padding-horizontal;
     color: $slidenav-color;
     @if(mixin-exists(hook-slidenav)) {@include hook-slidenav();}
 }
 
 /* Hover + Focus */
-.uk-slidenav:hover,
-.uk-slidenav:focus {
+.ui-slidenav:hover,
+.ui-slidenav:focus {
     color: $slidenav-hover-color;
     outline: none;
     @if(mixin-exists(hook-slidenav-hover)) {@include hook-slidenav-hover();}
 }
 
 /* OnClick */
-.uk-slidenav:active {
+.ui-slidenav:active {
     color: $slidenav-active-color;
     @if(mixin-exists(hook-slidenav-active)) {@include hook-slidenav-active();}
 }
@@ -62,7 +62,7 @@ $slidenav-large-padding-horizontal:              $slidenav-large-padding-vertica
  * Previous
  */
 
-.uk-slidenav-previous {
+.ui-slidenav-previous {
     @if(mixin-exists(hook-slidenav-previous)) {@include hook-slidenav-previous();}
 }
 
@@ -70,7 +70,7 @@ $slidenav-large-padding-horizontal:              $slidenav-large-padding-vertica
  * Next
  */
 
-.uk-slidenav-next {
+.ui-slidenav-next {
     @if(mixin-exists(hook-slidenav-next)) {@include hook-slidenav-next();}
 }
 
@@ -78,7 +78,7 @@ $slidenav-large-padding-horizontal:              $slidenav-large-padding-vertica
 /* Size modifier
  ========================================================================== */
 
-.uk-slidenav-large {
+.ui-slidenav-large {
     padding: $slidenav-large-padding-vertical $slidenav-large-padding-horizontal;
     @if(mixin-exists(hook-slidenav-large)) {@include hook-slidenav-large();}
 }
@@ -87,7 +87,7 @@ $slidenav-large-padding-horizontal:              $slidenav-large-padding-vertica
 /* Container
  ========================================================================== */
 
-.uk-slidenav-container {
+.ui-slidenav-container {
     display: flex;
     @if(mixin-exists(hook-slidenav-container)) {@include hook-slidenav-container();}
 }

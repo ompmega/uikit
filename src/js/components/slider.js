@@ -16,10 +16,10 @@ export default {
     data: {
         center: false,
         sets: false,
-        attrItem: 'uk-slider-item',
-        selList: '.uk-slider-items',
-        selNav: '.uk-slider-nav',
-        clsContainer: 'uk-slider-container',
+        attrItem: 'ui-slider-item',
+        selList: '.ui-slider-items',
+        selNav: '.ui-slider-nav',
+        clsContainer: 'ui-slider-container',
         Transitioner
     },
 
@@ -119,7 +119,7 @@ export default {
 
             $$(`[${this.attrItem}],[data-${this.attrItem}]`, this.$el).forEach(el => {
                 const index = data(el, this.attrItem);
-                this.maxIndex && toggleClass(el, 'uk-hidden', isNumeric(index) && (this.sets && !includes(this.sets, toFloat(index)) || index > this.maxIndex));
+                this.maxIndex && toggleClass(el, 'ui-hidden', isNumeric(index) && (this.sets && !includes(this.sets, toFloat(index)) || index > this.maxIndex));
             });
 
         },

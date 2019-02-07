@@ -10,18 +10,18 @@
 
     <body>
 
-        <div class="uk-container">
+        <div class="ui-container">
 
             <h1>Toggle</h1>
 
-            <div class="uk-child-width-1-5@m" uk-grid>
+            <div class="ui-child-width-1-5@m" ui-grid>
                 <div>
 
                     <h3>One item</h3>
 
                     <p>
-                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #toggle1">Button</button>
-                        <a href uk-toggle="target: #toggle1">Link</a>
+                        <button class="ui-button ui-button-default" type="button" ui-toggle="target: #toggle1">Button</button>
+                        <a href ui-toggle="target: #toggle1">Link</a>
                     </p>
 
                     <p id="toggle1">What's up?</p>
@@ -31,7 +31,7 @@
 
                     <h3>Two items</h3>
 
-                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: ~">Toggle</button>
+                    <button class="ui-button ui-button-default" type="button" ui-toggle="target: ~">Toggle</button>
 
                     <p>Hello!</p>
                     <p hidden>Bazinga!</p>
@@ -42,12 +42,12 @@
                     <h3>Multiple toggles</h3>
 
                     <div class="toggle3">
-                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: .toggle3">Next</button>
+                        <button class="ui-button ui-button-default" type="button" ui-toggle="target: .toggle3">Next</button>
                         <p>Hello!</p>
                     </div>
 
                     <div class="toggle3" hidden>
-                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: .toggle3">Previous</button>
+                        <button class="ui-button ui-button-default" type="button" ui-toggle="target: .toggle3">Previous</button>
                         <p>Bazinga!</p>
                     </div>
 
@@ -56,7 +56,7 @@
 
                     <h3>Multiple targets</h3>
 
-                    <button class="uk-button uk-button-default uk-margin uk-display-block" uk-toggle="target: ~">Go</button>
+                    <button class="ui-button ui-button-default ui-margin ui-display-block" ui-toggle="target: ~">Go</button>
 
                     <span>What's up?</span>
                     <span>Hello!</span>
@@ -67,16 +67,16 @@
 
                     <h3>Custom class</h3>
 
-                    <button class="uk-button uk-button-default" uk-toggle="target: +; cls: uk-alert-success">Toggle</button>
+                    <button class="ui-button ui-button-default" ui-toggle="target: +; cls: ui-alert-success">Toggle</button>
 
-                    <p class="uk-alert">What's up?</p>
+                    <p class="ui-alert">What's up?</p>
 
                 </div>
                 <div>
 
                     <h3>Animation</h3>
 
-                    <button class="uk-button uk-button-default" uk-toggle="target: +; animation: uk-animation-fade">Toggle</button>
+                    <button class="ui-button ui-button-default" ui-toggle="target: +; animation: ui-animation-fade">Toggle</button>
 
                     <p>Animation</p>
 
@@ -85,7 +85,7 @@
 
                     <h3>In/Out Animations</h3>
 
-                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: +; animation: uk-animation-slide-left, uk-animation-slide-top">Toggle</button>
+                    <button class="ui-button ui-button-default" type="button" ui-toggle="target: +; animation: ui-animation-slide-left, ui-animation-slide-top">Toggle</button>
 
                     <p>Animation</p>
 
@@ -94,17 +94,17 @@
 
                     <h3>Queued</h3>
 
-                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: ~; animation: uk-animation-fade; duration: 500; queued: true">Queued</button>
+                    <button class="ui-button ui-button-default" type="button" ui-toggle="target: ~; animation: ui-animation-fade; duration: 500; queued: true">Queued</button>
 
                     <p>Animation</p>
                     <p hidden>Bazinga!</p>
 
                 </div>
-                <div class="uk-width-expand@m">
+                <div class="ui-width-expand@m">
 
                     <h3>Mode Media</h3>
 
-                    <div class="uk-alert uk-alert-danger" uk-toggle="cls: uk-alert-success uk-alert-danger; mode: media; media: @xl">
+                    <div class="ui-alert ui-alert-danger" ui-toggle="cls: ui-alert-success ui-alert-danger; mode: media; media: @xl">
                         Only visibly @xl
                     </div>
 
@@ -113,7 +113,7 @@
 
                     <h3>Mode Hover</h3>
 
-                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: ~; mode: hover">Hover</button>
+                    <button class="ui-button ui-button-default" type="button" ui-toggle="target: ~; mode: hover">Hover</button>
 
                     <p>What's up?</p>
                     <p hidden>Hovered</p>
@@ -123,8 +123,8 @@
 
             <h2>JavaScript Options</h2>
 
-            <div class="uk-overflow-auto">
-                <table class="uk-table uk-table-striped">
+            <div class="ui-overflow-auto">
+                <table class="ui-table ui-table-striped">
                     <thead>
                         <tr>
                             <th>Option</th>

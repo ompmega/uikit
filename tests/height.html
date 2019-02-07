@@ -8,41 +8,41 @@
         <script src="js/test.js"></script>
         <style type="text/css">
 
-            [uk-height-match] > * > .uk-panel {
+            [ui-height-match] > * > .ui-panel {
                 padding: 10px;
                 text-align: center;
             }
 
-            [uk-height-match] > :nth-child(10n-9) > .uk-panel { background: rgba(0,0,0,0.1); }
-            [uk-height-match] > :nth-child(10n-8) > .uk-panel { background: rgba(0,0,0,0.15); }
-            [uk-height-match] > :nth-child(10n-7) > .uk-panel { background: rgba(0,0,0,0.2); }
-            [uk-height-match] > :nth-child(10n-6) > .uk-panel { background: rgba(0,0,0,0.25); }
-            [uk-height-match] > :nth-child(10n-5) > .uk-panel { background: rgba(0,0,0,0.3); }
-            [uk-height-match] > :nth-child(10n-4) > .uk-panel { background: rgba(0,0,0,0.35); }
-            [uk-height-match] > :nth-child(10n-3) > .uk-panel { background: rgba(0,0,0,0.40); }
-            [uk-height-match] > :nth-child(10n-2) > .uk-panel { background: rgba(0,0,0,0.45); }
-            [uk-height-match] > :nth-child(10n-1) > .uk-panel { background: rgba(0,0,0,0.50); }
-            [uk-height-match] > :nth-child(10n) > .uk-panel { background: rgba(0,0,0,0.55); }
+            [ui-height-match] > :nth-child(10n-9) > .ui-panel { background: rgba(0,0,0,0.1); }
+            [ui-height-match] > :nth-child(10n-8) > .ui-panel { background: rgba(0,0,0,0.15); }
+            [ui-height-match] > :nth-child(10n-7) > .ui-panel { background: rgba(0,0,0,0.2); }
+            [ui-height-match] > :nth-child(10n-6) > .ui-panel { background: rgba(0,0,0,0.25); }
+            [ui-height-match] > :nth-child(10n-5) > .ui-panel { background: rgba(0,0,0,0.3); }
+            [ui-height-match] > :nth-child(10n-4) > .ui-panel { background: rgba(0,0,0,0.35); }
+            [ui-height-match] > :nth-child(10n-3) > .ui-panel { background: rgba(0,0,0,0.40); }
+            [ui-height-match] > :nth-child(10n-2) > .ui-panel { background: rgba(0,0,0,0.45); }
+            [ui-height-match] > :nth-child(10n-1) > .ui-panel { background: rgba(0,0,0,0.50); }
+            [ui-height-match] > :nth-child(10n) > .ui-panel { background: rgba(0,0,0,0.55); }
 
         </style>
     </head>
 
     <body>
 
-        <div class="uk-container">
+        <div class="ui-container">
 
             <h2>Height Match</h2>
 
-            <div class="uk-grid uk-child-width-1-2@s">
+            <div class="ui-grid ui-child-width-1-2@s">
                 <div>
 
                     <h3>Each Row</h3>
 
-                    <div class="uk-child-width-1-2@m" uk-grid uk-height-match="target: > div > .uk-panel">
-                        <div><div class="uk-panel">1-2-M<br>...<br>...</div></div>
-                        <div><div class="uk-panel">1-2-M</div></div>
-                        <div><div class="uk-panel">1-2-M<br>...</div></div>
-                        <div><div class="uk-panel">1-2-M</div></div>
+                    <div class="ui-child-width-1-2@m" ui-grid ui-height-match="target: > div > .ui-panel">
+                        <div><div class="ui-panel">1-2-M<br>...<br>...</div></div>
+                        <div><div class="ui-panel">1-2-M</div></div>
+                        <div><div class="ui-panel">1-2-M<br>...</div></div>
+                        <div><div class="ui-panel">1-2-M</div></div>
                     </div>
 
                 </div>
@@ -50,11 +50,11 @@
 
                     <h3>All Rows</h3>
 
-                    <div class="uk-child-width-1-2@m" uk-grid uk-height-match="target: > div > .uk-panel; row: false">
-                        <div><div class="uk-panel">1-2-M<br>...<br>...</div></div>
-                        <div><div class="uk-panel">1-2-M</div></div>
-                        <div><div class="uk-panel">1-2-M<br>...</div></div>
-                        <div><div class="uk-panel">1-2-M</div></div>
+                    <div class="ui-child-width-1-2@m" ui-grid ui-height-match="target: > div > .ui-panel; row: false">
+                        <div><div class="ui-panel">1-2-M<br>...<br>...</div></div>
+                        <div><div class="ui-panel">1-2-M</div></div>
+                        <div><div class="ui-panel">1-2-M<br>...</div></div>
+                        <div><div class="ui-panel">1-2-M</div></div>
                     </div>
 
                 </div>
@@ -62,9 +62,9 @@
 
                     <h3>Hidden Panels</h3>
 
-                    <div class="uk-child-width-1-2@m" uk-grid uk-height-match="target: > div > .uk-panel; row: false">
-                        <div><div class="uk-panel" style="display: none;">1-2-M<br>...<br>...</div></div>
-                        <div><div class="uk-panel">1-2-M<br>...</div></div>
+                    <div class="ui-child-width-1-2@m" ui-grid ui-height-match="target: > div > .ui-panel; row: false">
+                        <div><div class="ui-panel" style="display: none;">1-2-M<br>...<br>...</div></div>
+                        <div><div class="ui-panel">1-2-M<br>...</div></div>
                     </div>
 
                 </div>
@@ -72,7 +72,7 @@
 
             <h2>JavaScript Options</h2>
 
-            <table class="uk-table uk-table-striped">
+            <table class="ui-table ui-table-striped">
                 <thead>
                     <tr>
                         <th>Option</th>

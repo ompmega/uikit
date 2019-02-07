@@ -14,15 +14,15 @@ export default {
 
     data: {
         media: 960,
-        attrItem: 'uk-tab-item'
+        attrItem: 'ui-tab-item'
     },
 
     connected() {
 
-        const cls = hasClass(this.$el, 'uk-tab-left')
-            ? 'uk-tab-left'
-            : hasClass(this.$el, 'uk-tab-right')
-                ? 'uk-tab-right'
+        const cls = hasClass(this.$el, 'ui-tab-left')
+            ? 'ui-tab-left'
+            : hasClass(this.$el, 'ui-tab-right')
+                ? 'ui-tab-right'
                 : false;
 
         if (cls) {

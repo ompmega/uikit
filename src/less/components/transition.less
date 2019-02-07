@@ -1,23 +1,23 @@
 // Name:            Transition
 // Description:     Utilities for transitions
 //
-// Component:       `uk-transition-*`
+// Component:       `ui-transition-*`
 //
-// Modifiers:       `uk-transition-fade`
-//                  `uk-transition-scale-up`
-//                  `uk-transition-scale-down`
-//                  `uk-transition-slide-top-*`
-//                  `uk-transition-slide-bottom-*`
-//                  `uk-transition-slide-left-*`
-//                  `uk-transition-slide-right-*`
-//                  `uk-transition-stroke`
-//                  `uk-transition-opaque`
-//                  `uk-transition-slow`
+// Modifiers:       `ui-transition-fade`
+//                  `ui-transition-scale-up`
+//                  `ui-transition-scale-down`
+//                  `ui-transition-slide-top-*`
+//                  `ui-transition-slide-bottom-*`
+//                  `ui-transition-slide-left-*`
+//                  `ui-transition-slide-right-*`
+//                  `ui-transition-stroke`
+//                  `ui-transition-opaque`
+//                  `ui-transition-slow`
 //
-// Sub-objects:     `uk-transition-toggle`,
-//                  `uk-transition-active`
+// Sub-objects:     `ui-transition-toggle`,
+//                  `ui-transition-active`
 //
-// States:          `uk-active`
+// States:          `ui-active`
 //
 // ========================================================================
 
@@ -47,7 +47,7 @@
  * 1. Prevent tab highlighting on iOS.
  */
 
-.uk-transition-toggle {
+.ui-transition-toggle {
     /* 1 */
     -webkit-tap-highlight-color: transparent;
 }
@@ -56,7 +56,7 @@
  * Remove outline for `tabindex`
  */
 
-.uk-transition-toggle:focus { outline: none; }
+.ui-transition-toggle:focus { outline: none; }
 
 
 /* Transitions
@@ -68,14 +68,14 @@
  * 2. Using `:hover` and a `touchstart` event listener registered on the document
  *    (Doesn't work on Surface touch devices)
  *
- * Note: Transitions don't work with `uk-postion-center-*` classes because they also use `transform`,
+ * Note: Transitions don't work with `ui-postion-center-*` classes because they also use `transform`,
  *       therefore it's recommended to use an extra `div` for the transition.
  */
 
-.uk-transition-fade,
-[class*='uk-transition-scale'],
-[class*='uk-transition-slide'],
-.uk-transition-stroke, {
+.ui-transition-fade,
+[class*='ui-transition-scale'],
+[class*='ui-transition-slide'],
+.ui-transition-stroke, {
     transition: @transition-duration ease-out;
     transition-property: opacity, transform, filter, stroke-dashoffset;
     opacity: 0;
@@ -85,29 +85,29 @@
  * Fade
  */
 
-.uk-transition-toggle:hover .uk-transition-fade,
-.uk-transition-toggle:focus .uk-transition-fade,
-.uk-transition-active.uk-active .uk-transition-fade { opacity: 1; }
+.ui-transition-toggle:hover .ui-transition-fade,
+.ui-transition-toggle:focus .ui-transition-fade,
+.ui-transition-active.ui-active .ui-transition-fade { opacity: 1; }
 
 /*
  * Scale
  * Note: Using `scale3d` for better image rendering
  */
 
-.uk-transition-scale-up { transform: scale3d(1,1,1); }
-.uk-transition-scale-down { transform: scale3d(@transition-scale,@transition-scale,1); }
+.ui-transition-scale-up { transform: scale3d(1,1,1); }
+.ui-transition-scale-down { transform: scale3d(@transition-scale,@transition-scale,1); }
 
 /* Show */
-.uk-transition-toggle:hover .uk-transition-scale-up,
-.uk-transition-toggle:focus .uk-transition-scale-up,
-.uk-transition-active.uk-active .uk-transition-scale-up {
+.ui-transition-toggle:hover .ui-transition-scale-up,
+.ui-transition-toggle:focus .ui-transition-scale-up,
+.ui-transition-active.ui-active .ui-transition-scale-up {
     opacity: 1;
     transform: scale3d(@transition-scale,@transition-scale,1);
 }
 
-.uk-transition-toggle:hover .uk-transition-scale-down,
-.uk-transition-toggle:focus .uk-transition-scale-down,
-.uk-transition-active.uk-active .uk-transition-scale-down {
+.ui-transition-toggle:hover .ui-transition-scale-down,
+.ui-transition-toggle:focus .ui-transition-scale-down,
+.ui-transition-active.ui-active .ui-transition-scale-down {
     opacity: 1;
     transform: scale3d(1,1,1);
 }
@@ -116,25 +116,25 @@
  * Slide
  */
 
-.uk-transition-slide-top { transform: translateY(-100%); }
-.uk-transition-slide-bottom { transform: translateY(100%); }
-.uk-transition-slide-left { transform: translateX(-100%); }
-.uk-transition-slide-right { transform: translateX(100%); }
+.ui-transition-slide-top { transform: translateY(-100%); }
+.ui-transition-slide-bottom { transform: translateY(100%); }
+.ui-transition-slide-left { transform: translateX(-100%); }
+.ui-transition-slide-right { transform: translateX(100%); }
 
-.uk-transition-slide-top-small { transform: translateY(-@transition-slide-small-translate); }
-.uk-transition-slide-bottom-small { transform: translateY(@transition-slide-small-translate); }
-.uk-transition-slide-left-small { transform: translateX(-@transition-slide-small-translate); }
-.uk-transition-slide-right-small { transform: translateX(@transition-slide-small-translate); }
+.ui-transition-slide-top-small { transform: translateY(-@transition-slide-small-translate); }
+.ui-transition-slide-bottom-small { transform: translateY(@transition-slide-small-translate); }
+.ui-transition-slide-left-small { transform: translateX(-@transition-slide-small-translate); }
+.ui-transition-slide-right-small { transform: translateX(@transition-slide-small-translate); }
 
-.uk-transition-slide-top-medium { transform: translateY(-@transition-slide-medium-translate); }
-.uk-transition-slide-bottom-medium { transform: translateY(@transition-slide-medium-translate); }
-.uk-transition-slide-left-medium { transform: translateX(-@transition-slide-medium-translate); }
-.uk-transition-slide-right-medium { transform: translateX(@transition-slide-medium-translate); }
+.ui-transition-slide-top-medium { transform: translateY(-@transition-slide-medium-translate); }
+.ui-transition-slide-bottom-medium { transform: translateY(@transition-slide-medium-translate); }
+.ui-transition-slide-left-medium { transform: translateX(-@transition-slide-medium-translate); }
+.ui-transition-slide-right-medium { transform: translateX(@transition-slide-medium-translate); }
 
 /* Show */
-.uk-transition-toggle:hover [class*='uk-transition-slide'],
-.uk-transition-toggle:focus [class*='uk-transition-slide'],
-.uk-transition-active.uk-active [class*='uk-transition-slide'] {
+.ui-transition-toggle:hover [class*='ui-transition-slide'],
+.ui-transition-toggle:focus [class*='ui-transition-slide'],
+.ui-transition-active.ui-active [class*='ui-transition-slide'] {
     opacity: 1;
     transform: translate(0,0);
 }
@@ -143,12 +143,12 @@
  * Stroke
  */
 
-.uk-transition-stroke { transition-duration: 3s; }
+.ui-transition-stroke { transition-duration: 3s; }
 
 /* Show */
-.uk-transition-stroke:hover,
-.uk-transition-stroke:focus,
-.uk-transition-stroke.uk-transition-active {
+.ui-transition-stroke:hover,
+.ui-transition-stroke:focus,
+.ui-transition-stroke.ui-transition-active {
     opacity: 1;
     stroke-dashoffset: 0 !important;
 }
@@ -157,13 +157,13 @@
 /* Opacity modifier
  ========================================================================== */
 
-.uk-transition-opaque { opacity: 1; }
+.ui-transition-opaque { opacity: 1; }
 
 
 /* Duration modifiers
  ========================================================================== */
 
-.uk-transition-slow { transition-duration: @transition-slow-duration; }
+.ui-transition-slow { transition-duration: @transition-slow-duration; }
 
 
 // Hooks

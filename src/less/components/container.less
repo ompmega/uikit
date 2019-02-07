@@ -1,15 +1,15 @@
 // Name:            Container
 // Description:     Component to align and center your site and grid content
 //
-// Component:       `uk-container`
+// Component:       `ui-container`
 //
-// Modifier:        `uk-container-small`
-//                  `uk-container-large`
-//                  `uk-container-expand`
-//                  `uk-container-expand-left`
-//                  `uk-container-expand-right`
-//                  `uk-container-item-padding-remove-left`
-//                  `uk-container-item-padding-remove-right`
+// Modifier:        `ui-container-small`
+//                  `ui-container-large`
+//                  `ui-container-expand`
+//                  `ui-container-expand-left`
+//                  `ui-container-expand-right`
+//                  `ui-container-item-padding-remove-left`
+//                  `ui-container-item-padding-remove-right`
 //
 // ========================================================================
 
@@ -36,7 +36,7 @@
  *    unaffected by the padding on different breakpoints. It's important for the size modifiers.
  */
 
-.uk-container {
+.ui-container {
     /* 1 */
     box-sizing: content-box;
     max-width: @container-max-width;
@@ -49,7 +49,7 @@
 /* Phone landscape and bigger */
 @media (min-width: @breakpoint-small) {
 
-    .uk-container {
+    .ui-container {
         padding-left: @container-padding-horizontal-s;
         padding-right: @container-padding-horizontal-s;
     }
@@ -59,7 +59,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-container {
+    .ui-container {
         padding-left: @container-padding-horizontal-m;
         padding-right: @container-padding-horizontal-m;
     }
@@ -70,25 +70,25 @@
  * Micro clearfix
  */
 
-.uk-container::before,
-.uk-container::after {
+.ui-container::before,
+.ui-container::after {
     content: "";
     display: table;
 }
 
-.uk-container::after { clear: both; }
+.ui-container::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-container > :last-child { margin-bottom: 0; }
+.ui-container > :last-child { margin-bottom: 0; }
 
 /*
  * Remove padding from nested containers
  */
 
-.uk-container .uk-container {
+.ui-container .ui-container {
     padding-left: 0;
     padding-right: 0;
 }
@@ -97,13 +97,13 @@
 /* Size modifier
  ========================================================================== */
 
-.uk-container-xsmall { max-width: @container-xsmall-max-width; }
+.ui-container-xsmall { max-width: @container-xsmall-max-width; }
 
-.uk-container-small { max-width: @container-small-max-width; }
+.ui-container-small { max-width: @container-small-max-width; }
 
-.uk-container-large { max-width: @container-large-max-width; }
+.ui-container-large { max-width: @container-large-max-width; }
 
-.uk-container-expand { max-width: none; }
+.ui-container-expand { max-width: none; }
 
 
 /* Expand modifier
@@ -113,34 +113,34 @@
  * Expand one side only
  */
 
-.uk-container-expand-left { margin-left: 0; }
-.uk-container-expand-right { margin-right: 0; }
+.ui-container-expand-left { margin-left: 0; }
+.ui-container-expand-right { margin-right: 0; }
 
 /* Phone landscape and bigger */
 @media (min-width: @breakpoint-small) {
 
-    .uk-container-expand-left.uk-container-xsmall,
-    .uk-container-expand-right.uk-container-xsmall { max-width: ~'calc(50% + (@{container-xsmall-max-width} / 2) - @{container-padding-horizontal-s})'; }
+    .ui-container-expand-left.ui-container-xsmall,
+    .ui-container-expand-right.ui-container-xsmall { max-width: ~'calc(50% + (@{container-xsmall-max-width} / 2) - @{container-padding-horizontal-s})'; }
 
-    .uk-container-expand-left.uk-container-small,
-    .uk-container-expand-right.uk-container-small { max-width: ~'calc(50% + (@{container-small-max-width} / 2) - @{container-padding-horizontal-s})'; }
+    .ui-container-expand-left.ui-container-small,
+    .ui-container-expand-right.ui-container-small { max-width: ~'calc(50% + (@{container-small-max-width} / 2) - @{container-padding-horizontal-s})'; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-container-expand-left,
-    .uk-container-expand-right { max-width: ~'calc(50% + (@{container-max-width} / 2) - @{container-padding-horizontal-m})'; }
+    .ui-container-expand-left,
+    .ui-container-expand-right { max-width: ~'calc(50% + (@{container-max-width} / 2) - @{container-padding-horizontal-m})'; }
 
-    .uk-container-expand-left.uk-container-xsmall,
-    .uk-container-expand-right.uk-container-xsmall { max-width: ~'calc(50% + (@{container-xsmall-max-width} / 2) - @{container-padding-horizontal-m})'; }
+    .ui-container-expand-left.ui-container-xsmall,
+    .ui-container-expand-right.ui-container-xsmall { max-width: ~'calc(50% + (@{container-xsmall-max-width} / 2) - @{container-padding-horizontal-m})'; }
 
-    .uk-container-expand-left.uk-container-small,
-    .uk-container-expand-right.uk-container-small { max-width: ~'calc(50% + (@{container-small-max-width} / 2) - @{container-padding-horizontal-m})'; }
+    .ui-container-expand-left.ui-container-small,
+    .ui-container-expand-right.ui-container-small { max-width: ~'calc(50% + (@{container-small-max-width} / 2) - @{container-padding-horizontal-m})'; }
 
-    .uk-container-expand-left.uk-container-large,
-    .uk-container-expand-right.uk-container-large { max-width: ~'calc(50% + (@{container-large-max-width} / 2) - @{container-padding-horizontal-m})'; }
+    .ui-container-expand-left.ui-container-large,
+    .ui-container-expand-right.ui-container-large { max-width: ~'calc(50% + (@{container-large-max-width} / 2) - @{container-padding-horizontal-m})'; }
 
 }
 
@@ -153,31 +153,31 @@
  * Note: It has to be negative margin on the item, because it's specific to the item.
  */
 
-.uk-container-item-padding-remove-left,
-.uk-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal})' }
+.ui-container-item-padding-remove-left,
+.ui-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal})' }
 
-.uk-container-item-padding-remove-left { margin-left: -@container-padding-horizontal; }
-.uk-container-item-padding-remove-right { margin-right: -@container-padding-horizontal; }
+.ui-container-item-padding-remove-left { margin-left: -@container-padding-horizontal; }
+.ui-container-item-padding-remove-right { margin-right: -@container-padding-horizontal; }
 
 /* Phone landscape and bigger */
 @media (min-width: @breakpoint-small) {
 
-    .uk-container-item-padding-remove-left,
-    .uk-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal-s})' }
+    .ui-container-item-padding-remove-left,
+    .ui-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal-s})' }
 
-    .uk-container-item-padding-remove-left { margin-left: -@container-padding-horizontal-s; }
-    .uk-container-item-padding-remove-right { margin-right: -@container-padding-horizontal-s; }
+    .ui-container-item-padding-remove-left { margin-left: -@container-padding-horizontal-s; }
+    .ui-container-item-padding-remove-right { margin-right: -@container-padding-horizontal-s; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @breakpoint-medium) {
 
-    .uk-container-item-padding-remove-left,
-    .uk-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal-m})' }
+    .ui-container-item-padding-remove-left,
+    .ui-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal-m})' }
 
-    .uk-container-item-padding-remove-left { margin-left: -@container-padding-horizontal-m; }
-    .uk-container-item-padding-remove-right { margin-right: -@container-padding-horizontal-m; }
+    .ui-container-item-padding-remove-left { margin-left: -@container-padding-horizontal-m; }
+    .ui-container-item-padding-remove-right { margin-right: -@container-padding-horizontal-m; }
 
 }
 

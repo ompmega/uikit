@@ -1,17 +1,17 @@
 // Name:            Lightbox
 // Description:     Component to create an lightbox image gallery
 //
-// Component:       `uk-lightbox`
+// Component:       `ui-lightbox`
 //
-// Sub-objects:     `uk-lightbox-page`
-//                  `uk-lightbox-items`
-//                  `uk-lightbox-toolbar`
-//                  `uk-lightbox-toolbar-icon`
-//                  `uk-lightbox-button`
-//                  `uk-lightbox-caption`
-//                  `uk-lightbox-iframe`
+// Sub-objects:     `ui-lightbox-page`
+//                  `ui-lightbox-items`
+//                  `ui-lightbox-toolbar`
+//                  `ui-lightbox-toolbar-icon`
+//                  `ui-lightbox-button`
+//                  `ui-lightbox-caption`
+//                  `ui-lightbox-iframe`
 //
-// States:          `uk-open`
+// States:          `ui-open`
 //
 // ========================================================================
 
@@ -56,7 +56,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * 6. Fade-in transition
  */
 
-.uk-lightbox {
+.ui-lightbox {
     /* 1 */
     display: none;
     /* 2 */
@@ -80,7 +80,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * 2. Fade-in
  */
 
-.uk-lightbox.uk-open {
+.ui-lightbox.ui-open {
     display: block;
     /* 2 */
     opacity: 1;
@@ -94,7 +94,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * Prevent scrollbars
  */
 
-.uk-lightbox-page { overflow: hidden; }
+.ui-lightbox-page { overflow: hidden; }
 
 
 /* Item
@@ -110,7 +110,7 @@ $lightbox-button-hover-color:                    #fff !default;
  *    Using `vh` and `vw` to make responsive image work in IE11
  */
 
-.uk-lightbox-items > * {
+.ui-lightbox-items > * {
     /* 1 */
     position: absolute;
     top: 0;
@@ -129,35 +129,35 @@ $lightbox-button-hover-color:                    #fff !default;
 }
 
 /* 5 */
-.uk-lightbox-items > * > * {
+.ui-lightbox-items > * > * {
     max-width: $lightbox-item-max-width;
     max-height: $lightbox-item-max-height;
 }
 
-.uk-lightbox-items > * > :not(iframe) {
+.ui-lightbox-items > * > :not(iframe) {
     width: auto;
     height: auto;
 }
 
-.uk-lightbox-items > .uk-active { display: flex; }
+.ui-lightbox-items > .ui-active { display: flex; }
 
 /* Toolbar
  ========================================================================== */
 
-.uk-lightbox-toolbar {
+.ui-lightbox-toolbar {
     padding: $lightbox-toolbar-padding-vertical $lightbox-toolbar-padding-horizontal;
     background: $lightbox-toolbar-background;
     color: $lightbox-toolbar-color;
     @if(mixin-exists(hook-lightbox-toolbar)) {@include hook-lightbox-toolbar();}
 }
 
-.uk-lightbox-toolbar > * { color: $lightbox-toolbar-color; }
+.ui-lightbox-toolbar > * { color: $lightbox-toolbar-color; }
 
 
 /* Toolbar Icon (Close)
  ========================================================================== */
 
-.uk-lightbox-toolbar-icon {
+.ui-lightbox-toolbar-icon {
     padding: $lightbox-toolbar-icon-padding;
     color: $lightbox-toolbar-icon-color;
     @if(mixin-exists(hook-lightbox-toolbar-icon)) {@include hook-lightbox-toolbar-icon();}
@@ -167,7 +167,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * Hover
  */
 
-.uk-lightbox-toolbar-icon:hover {
+.ui-lightbox-toolbar-icon:hover {
     color: $lightbox-toolbar-icon-hover-color;
     @if(mixin-exists(hook-lightbox-toolbar-icon-hover)) {@include hook-lightbox-toolbar-icon-hover();}
 }
@@ -181,7 +181,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * 1. Center icon vertically and horizontally
  */
 
-.uk-lightbox-button {
+.ui-lightbox-button {
     box-sizing: border-box;
     width: $lightbox-button-size;
     height: $lightbox-button-size;
@@ -198,7 +198,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * Hover
  */
 
-.uk-lightbox-button:hover {
+.ui-lightbox-button:hover {
     color: $lightbox-button-hover-color;
     @if(mixin-exists(hook-lightbox-button-hover)) {@include hook-lightbox-button-hover();}
 }
@@ -207,13 +207,13 @@ $lightbox-button-hover-color:                    #fff !default;
 /* Caption
  ========================================================================== */
 
-.uk-lightbox-caption {}
+.ui-lightbox-caption {}
 
 
 /* Iframe
  ========================================================================== */
 
-.uk-lightbox-iframe {
+.ui-lightbox-iframe {
     width: 80%;
     height: 80%;
 }

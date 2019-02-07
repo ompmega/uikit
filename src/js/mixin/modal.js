@@ -18,7 +18,7 @@ export default {
     },
 
     data: {
-        cls: 'uk-open',
+        cls: 'ui-open',
         escClose: true,
         bgClose: true,
         overlay: true,

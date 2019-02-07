@@ -73,7 +73,7 @@ export default {
                     const {body} = document;
                     const scroll = body.scrollTop;
                     const [el] = toggled;
-                    const inProgress = Animation.inProgress(el) && hasClass(el, 'uk-animation-leave')
+                    const inProgress = Animation.inProgress(el) && hasClass(el, 'ui-animation-leave')
                             || Transition.inProgress(el) && el.style.height === '0px';
 
                     p = all(toggled);
@@ -115,7 +115,7 @@ export default {
             show = isBoolean(show)
                 ? show
                 : Animation.inProgress(el)
-                    ? hasClass(el, 'uk-animation-leave')
+                    ? hasClass(el, 'ui-animation-leave')
                     : Transition.inProgress(el)
                         ? el.style.height === '0px'
                         : !this.isToggled(el);

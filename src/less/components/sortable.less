@@ -1,15 +1,15 @@
 // Name:            Sortable
 // Description:     Component to create sortable grids and lists
 //
-// Component:       `uk-sortable`
+// Component:       `ui-sortable`
 //
-// Sub-objects:     `uk-sortable-drag`
-//                  `uk-sortable-placeholder`
-//                  `uk-sortable-handle`
+// Sub-objects:     `ui-sortable-drag`
+//                  `ui-sortable-placeholder`
+//                  `ui-sortable-handle`
 //
-// Modifiers:       `uk-sortable-empty`
+// Modifiers:       `ui-sortable-empty`
 //
-// States:          `uk-drag`
+// States:          `ui-drag`
 //
 // ========================================================================
 
@@ -28,7 +28,7 @@
    Component: Sortable
  ========================================================================== */
 
-.uk-sortable {
+.ui-sortable {
     position: relative;
     .hook-sortable;
 }
@@ -37,19 +37,19 @@
  * Deactivate pointer-events on SVGs in Safari
  */
 
-.uk-sortable svg { pointer-events: none; }
+.ui-sortable svg { pointer-events: none; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-sortable > :last-child { margin-bottom: 0; }
+.ui-sortable > :last-child { margin-bottom: 0; }
 
 
 /* Drag
  ========================================================================== */
 
-.uk-sortable-drag {
+.ui-sortable-drag {
     position: absolute !important;
     z-index: @sortable-dragged-z-index !important;
     pointer-events: none;
@@ -60,7 +60,7 @@
 /* Placeholder
  ========================================================================== */
 
-.uk-sortable-placeholder {
+.ui-sortable-placeholder {
     opacity: @sortable-placeholder-opacity;
     .hook-sortable-placeholder;
 }
@@ -69,7 +69,7 @@
 /* Empty modifier
  ========================================================================== */
 
-.uk-sortable-empty {
+.ui-sortable-empty {
     min-height: @sortable-empty-height;
     .hook-sortable-empty;
 }
@@ -79,7 +79,7 @@
  ========================================================================== */
 
 /* Hover */
-.uk-sortable-handle:hover { cursor: move; }
+.ui-sortable-handle:hover { cursor: move; }
 
 
 

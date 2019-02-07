@@ -10,69 +10,69 @@
 
     <body>
 
-        <div class="uk-container">
+        <div class="ui-container">
 
             <h1>Notification</h1>
 
-            <div class="uk-child-width-1-2@m" uk-grid>
+            <div class="ui-child-width-1-2@m" ui-grid>
                 <div>
 
-                    <p class="uk-notification-message">
-                        <a href="#" class="uk-notification-close" uk-close></a>
+                    <p class="ui-notification-message">
+                        <a href="#" class="ui-notification-close" ui-close></a>
                         Message
                     </p>
 
-                    <p class="uk-notification-message uk-notification-message-primary">
-                        <a href="#" class="uk-notification-close" uk-close></a>
+                    <p class="ui-notification-message ui-notification-message-primary">
+                        <a href="#" class="ui-notification-close" ui-close></a>
                         Primary message
                     </p>
 
-                    <p class="uk-notification-message uk-notification-message-success">
-                        <a href="#" class="uk-notification-close" uk-close></a>
+                    <p class="ui-notification-message ui-notification-message-success">
+                        <a href="#" class="ui-notification-close" ui-close></a>
                         Success message
                     </p>
 
-                    <p class="uk-notification-message uk-notification-message-warning">
-                        <a href="#" class="uk-notification-close" uk-close></a>
+                    <p class="ui-notification-message ui-notification-message-warning">
+                        <a href="#" class="ui-notification-close" ui-close></a>
                         Warning message
                     </p>
 
-                    <p class="uk-notification-message uk-notification-message-danger">
-                        <a href="#" class="uk-notification-close" uk-close></a>
+                    <p class="ui-notification-message ui-notification-message-danger">
+                        <a href="#" class="ui-notification-close" ui-close></a>
                         Danger message
                     </p>
 
                 </div>
                 <div>
 
-                    <p uk-margin>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'top-left'})">Top Left</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'top-center'})">Top Center</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'top-right'})">Top Right</button>
+                    <p ui-margin>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'top-left'})">Top Left</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'top-center'})">Top Center</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'top-right'})">Top Right</button>
                     </p>
 
-                    <p uk-margin>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'bottom-left'})">Bottom Left</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'bottom-center'})">Bottom Center</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'bottom-right'})">Bottom Right</button>
+                    <p ui-margin>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'bottom-left'})">Bottom Left</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'bottom-center'})">Bottom Center</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Message', pos: 'bottom-right'})">Bottom Right</button>
                     </p>
 
                     <h2>Styles</h2>
 
-                    <p uk-margin>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Primary message', status: 'primary'})">Primary</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Success message', status: 'success'})">Success</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Warning message', status: 'warning'})">Warning</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Danger message', status: 'danger'})">Danger</button>
+                    <p ui-margin>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Primary message', status: 'primary'})">Primary</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Success message', status: 'success'})">Success</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Warning message', status: 'warning'})">Warning</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: 'Danger message', status: 'danger'})">Danger</button>
                     </p>
 
                     <h2>Specials</h2>
 
-                    <p uk-margin>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> Message with an icon'})">With icon</button>
-                        <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: '<a href=\'#new-location\'>Message with a link</a>'})">With link</button>
-                        <button class="uk-button uk-button-default" type="button"  onclick="UIkit.notification({message: 'Message without timeout', timeout: 0})">No Timeout</button>
-                        <button class="uk-button uk-button-default" onclick="UIkit.notification.closeAll()">Close All</button>
+                    <p ui-margin>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: '<span ui-icon=\'icon: check\'></span> Message with an icon'})">With icon</button>
+                        <button class="ui-button ui-button-default" type="button" onclick="UIkit.notification({message: '<a href=\'#new-location\'>Message with a link</a>'})">With link</button>
+                        <button class="ui-button ui-button-default" type="button"  onclick="UIkit.notification({message: 'Message without timeout', timeout: 0})">No Timeout</button>
+                        <button class="ui-button ui-button-default" onclick="UIkit.notification.closeAll()">Close All</button>
                     </p>
 
                 </div>
@@ -80,8 +80,8 @@
 
             <h2>JavaScript Options</h2>
 
-            <div class="uk-overflow-auto">
-                <table class="uk-table uk-table-striped">
+            <div class="ui-overflow-auto">
+                <table class="ui-table ui-table-striped">
                     <thead>
                         <tr>
                             <th>Option</th>

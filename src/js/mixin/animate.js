@@ -1,6 +1,6 @@
 import {addClass, append, assign, css, fastdom, height, includes, index, isVisible, noop, position, Promise, removeClass, scrollTop, toFloat, toNodes, Transition} from 'uikit-util';
 
-const targetClass = 'uk-animation-target';
+const targetClass = 'ui-animation-target';
 
 export default {
 

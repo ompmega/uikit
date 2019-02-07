@@ -11,7 +11,7 @@ export default {
     },
 
     data: {
-        cls: 'uk-active',
+        cls: 'ui-active',
         closest: false,
         scroll: false,
         overflow: true,

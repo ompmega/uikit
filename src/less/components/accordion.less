@@ -1,12 +1,12 @@
 // Name:            Accordion
 // Description:     Component to create accordions
 //
-// Component:       `uk-accordion`
+// Component:       `ui-accordion`
 //
-// Sub-objects:     `uk-accordion-title`
-//                  `uk-accordion-content`
+// Sub-objects:     `ui-accordion-title`
+//                  `ui-accordion-content`
 //
-// States:          `uk-open`
+// States:          `ui-open`
 //
 // ========================================================================
 
@@ -28,7 +28,7 @@
    Component: Accordion
  ========================================================================== */
 
-.uk-accordion {
+.ui-accordion {
     padding: 0;
     list-style: none;
     .hook-accordion;
@@ -38,7 +38,7 @@
 /* Item
  ========================================================================== */
 
-.uk-accordion > :nth-child(n+2) {
+.ui-accordion > :nth-child(n+2) {
     margin-top: @accordion-item-margin-top;
     .hook-accordion-item;
 }
@@ -47,7 +47,7 @@
 /* Title
  ========================================================================== */
 
-.uk-accordion-title {
+.ui-accordion-title {
     display: block;
     font-size: @accordion-title-font-size;
     line-height: @accordion-title-line-height;
@@ -56,8 +56,8 @@
 }
 
 /* Hover + Focus */
-.uk-accordion-title:hover,
-.uk-accordion-title:focus {
+.ui-accordion-title:hover,
+.ui-accordion-title:focus {
     color: @accordion-title-hover-color;
     text-decoration: none;
     outline: none;
@@ -68,7 +68,7 @@
 /* Content
  ========================================================================== */
 
-.uk-accordion-content {
+.ui-accordion-content {
     margin-top: @accordion-content-margin-top;
     .hook-accordion-content;
 }
@@ -77,19 +77,19 @@
  * Micro clearfix
  */
 
-.uk-accordion-content::before,
-.uk-accordion-content::after {
+.ui-accordion-content::before,
+.ui-accordion-content::after {
     content: "";
     display: table;
 }
 
-.uk-accordion-content::after { clear: both; }
+.ui-accordion-content::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
- .uk-accordion-content > :last-child { margin-bottom: 0; }
+ .ui-accordion-content > :last-child { margin-bottom: 0; }
 
 
 // Hooks
@@ -113,17 +113,17 @@
 
 .hook-inverse() {
 
-    .uk-accordion > :nth-child(n+2) {
+    .ui-accordion > :nth-child(n+2) {
         .hook-inverse-accordion-item;
     }
 
-    .uk-accordion-title {
+    .ui-accordion-title {
         color: @inverse-accordion-title-color;
         .hook-inverse-accordion-title;
     }
 
-    .uk-accordion-title:hover,
-    .uk-accordion-title:focus {
+    .ui-accordion-title:hover,
+    .ui-accordion-title:focus {
         color: @inverse-accordion-title-hover-color;
         .hook-inverse-accordion-title-hover;
     }

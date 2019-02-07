@@ -418,7 +418,7 @@
                 }
 
                 if (!ctx.id) {
-                    ctx.id = "uk-" + (Date.now()) + i;
+                    ctx.id = "ui-" + (Date.now()) + i;
                     removes.push(function () { return removeAttr(ctx, 'id'); });
                 }
 
@@ -1317,16 +1317,16 @@
         var docEl = document.documentElement;
 
         if (!isIE) {
-            return getStyles(docEl).getPropertyValue(("--uk-" + name));
+            return getStyles(docEl).getPropertyValue(("--ui-" + name));
         }
 
         if (!(name in vars)) {
 
-            /* usage in css: .uk-name:before { content:"xyz" } */
+            /* usage in css: .ui-name:before { content:"xyz" } */
 
             var element = append(docEl, document.createElement('div'));
 
-            addClass(element, ("uk-" + name));
+            addClass(element, ("ui-" + name));
 
             vars[name] = getStyle(element, 'content', ':before').replace(/^["'](.*)["']$/, '$1');
 
@@ -1391,7 +1391,7 @@
                     var type = ref.type;
 
                     clearTimeout(timer);
-                    removeClass(element, 'uk-transition');
+                    removeClass(element, 'ui-transition');
                     css(element, {
                         'transition-property': '',
                         'transition-duration': '',
@@ -1404,7 +1404,7 @@
                     return element === target;
                 });
 
-                addClass(element, 'uk-transition');
+                addClass(element, 'ui-transition');
                 css(element, assign({
                     'transition-property': Object.keys(props).map(propName).join(','),
                     'transition-duration': (duration + "ms"),
@@ -1430,13 +1430,13 @@
         },
 
         inProgress: function(element) {
-            return hasClass(element, 'uk-transition');
+            return hasClass(element, 'ui-transition');
         }
 
     };
 
-    var animationPrefix = 'uk-animation-';
-    var clsCancelAnimation = 'uk-cancel-animation';
+    var animationPrefix = 'ui-animation-';
+    var clsCancelAnimation = 'ui-cancel-animation';
 
     function animate(element, animation, duration, origin, out) {
         var arguments$1 = arguments;
@@ -1457,7 +1457,7 @@
                 if (startsWith(animation, animationPrefix)) {
 
                     if (origin) {
-                        cls += " uk-transform-origin-" + origin;
+                        cls += " ui-transform-origin-" + origin;
                     }
 
                     if (out) {
@@ -2747,7 +2747,7 @@
 
             if (UIkit._initialized && !opt.functional) {
                 var id = hyphenate(name);
-                fastdom.read(function () { return UIkit[name](("[uk-" + id + "],[data-uk-" + id + "]")); });
+                fastdom.read(function () { return UIkit[name](("[ui-" + id + "],[data-ui-" + id + "]")); });
             }
 
             return components[name] = isPlainObject(options) ? opt : options;
@@ -2785,8 +2785,8 @@
     }
 
     function getComponentName(attribute) {
-        return startsWith(attribute, 'uk-') || startsWith(attribute, 'data-uk-')
-            ? camelize(attribute.replace('data-uk-', '').replace('uk-', ''))
+        return startsWith(attribute, 'ui-') || startsWith(attribute, 'data-ui-')
+            ? camelize(attribute.replace('data-ui-', '').replace('ui-', ''))
             : false;
     }
 
@@ -2892,7 +2892,7 @@
 
         function apply$$1(node, fn) {
 
-            if (node.nodeType !== 1 || hasAttr(node, 'uk-no-boot')) {
+            if (node.nodeType !== 1 || hasAttr(node, 'ui-no-boot')) {
                 return;
             }
 
@@ -3546,7 +3546,7 @@
 
     UIkit.util = util;
     UIkit.data = '__uikit__';
-    UIkit.prefix = 'uk-';
+    UIkit.prefix = 'ui-';
     UIkit.options = {};
 
     globalAPI(UIkit);
@@ -3642,7 +3642,7 @@
                         var body = document.body;
                         var scroll = body.scrollTop;
                         var el = toggled[0];
-                        var inProgress = Animation.inProgress(el) && hasClass(el, 'uk-animation-leave')
+                        var inProgress = Animation.inProgress(el) && hasClass(el, 'ui-animation-leave')
                                 || Transition.inProgress(el) && el.style.height === '0px';
 
                         p = all(toggled);
@@ -3688,7 +3688,7 @@
                 show = isBoolean(show)
                     ? show
                     : Animation.inProgress(el)
-                        ? hasClass(el, 'uk-animation-leave')
+                        ? hasClass(el, 'ui-animation-leave')
                         : Transition.inProgress(el)
                             ? el.style.height === '0px'
                             : !this.isToggled(el);
@@ -3819,9 +3819,9 @@
             animation: [true],
             collapsible: true,
             multiple: false,
-            clsOpen: 'uk-open',
-            toggle: '> .uk-accordion-title',
-            content: '> .uk-accordion-content',
+            clsOpen: 'ui-open',
+            toggle: '> .ui-accordion-title',
+            content: '> .ui-accordion-content',
             transition: 'ease'
         },
 
@@ -3944,7 +3944,7 @@
 
         data: {
             animation: [true],
-            selClose: '.uk-alert-close',
+            selClose: '.ui-alert-close',
             duration: 150,
             hideProps: assign({opacity: 0}, Togglable.data.hideProps)
         },
@@ -4011,7 +4011,7 @@
             on(document, 'animationstart', function (ref) {
                 var target = ref.target;
 
-                if ((css(target, 'animationName') || '').match(/^uk-.*(left|right)/)) {
+                if ((css(target, 'animationName') || '').match(/^ui-.*(left|right)/)) {
 
                     started++;
                     css(document.body, 'overflowX', 'hidden');
@@ -4266,8 +4266,8 @@
             delayHide: 800,
             clsDrop: false,
             hoverIdle: 200,
-            animation: ['uk-animation-fade'],
-            cls: 'uk-open'
+            animation: ['ui-animation-fade'],
+            cls: 'ui-open'
         },
 
         computed: {
@@ -4281,7 +4281,7 @@
             clsDrop: function(ref) {
                 var clsDrop = ref.clsDrop;
 
-                return clsDrop || ("uk-" + (this.$options.name));
+                return clsDrop || ("ui-" + (this.$options.name));
             },
 
             clsPos: function() {
@@ -4804,8 +4804,8 @@
         },
 
         data: {
-            margin: 'uk-margin-small-top',
-            firstColumn: 'uk-first-column'
+            margin: 'ui-margin-small-top',
+            firstColumn: 'ui-first-column'
         },
 
         update: {
@@ -4936,8 +4936,8 @@
         },
 
         data: {
-            margin: 'uk-grid-margin',
-            clsStack: 'uk-grid-stack',
+            margin: 'ui-grid-margin',
+            clsStack: 'ui-grid-stack',
             masonry: false,
             parallax: 0
         },
@@ -4957,7 +4957,7 @@
         },
 
         connected: function() {
-            this.masonry && addClass(this.$el, 'uk-flex-top uk-flex-wrap-top');
+            this.masonry && addClass(this.$el, 'ui-flex-top ui-flex-wrap-top');
         },
 
         update: [
@@ -5331,7 +5331,7 @@
             var assign$$1;
 
 
-            this.class += ' uk-svg';
+            this.class += ' ui-svg';
 
             if (!this.icon && includes(this.src, '#')) {
 
@@ -5568,7 +5568,7 @@
         isIcon: true,
 
         connected: function() {
-            addClass(this.$el, 'uk-icon');
+            addClass(this.$el, 'ui-icon');
         },
 
         methods: {
@@ -5603,7 +5603,7 @@
         extends: IconComponent,
 
         connected: function() {
-            addClass(this.$el, 'uk-slidenav');
+            addClass(this.$el, 'ui-slidenav');
         },
 
         computed: {
@@ -5611,7 +5611,7 @@
             icon: function(ref, $el) {
                 var icon = ref.icon;
 
-                return hasClass($el, 'uk-slidenav-large')
+                return hasClass($el, 'ui-slidenav-large')
                     ? (icon + "-large")
                     : icon;
             }
@@ -5629,9 +5629,9 @@
             icon: function(ref, $el) {
                 var icon = ref.icon;
 
-                return hasClass($el, 'uk-search-icon') && parents($el, '.uk-search-large').length
+                return hasClass($el, 'ui-search-icon') && parents($el, '.ui-search-large').length
                     ? 'search-large'
-                    : parents($el, '.uk-search-navbar').length
+                    : parents($el, '.ui-search-navbar').length
                         ? 'search-navbar'
                         : icon;
             }
@@ -5647,7 +5647,7 @@
         computed: {
 
             icon: function() {
-                return ("close-" + (hasClass(this.$el, 'uk-close-large') ? 'large' : 'icon'));
+                return ("close-" + (hasClass(this.$el, 'ui-close-large') ? 'large' : 'icon'));
             }
 
         }
@@ -6029,8 +6029,8 @@
 
         data: {
             fill: '',
-            clsWrapper: 'uk-leader-fill',
-            clsHide: 'uk-leader-hide',
+            clsWrapper: 'ui-leader-fill',
+            clsHide: 'ui-leader-hide',
             attrFill: 'data-fill'
         },
 
@@ -6126,7 +6126,7 @@
         },
 
         data: {
-            cls: 'uk-open',
+            cls: 'ui-open',
             escClose: true,
             bgClose: true,
             overlay: true,
@@ -6405,9 +6405,9 @@
         mixins: [Modal],
 
         data: {
-            clsPage: 'uk-modal-page',
-            selPanel: '.uk-modal-dialog',
-            selClose: '.uk-modal-close, .uk-modal-close-default, .uk-modal-close-outside, .uk-modal-close-full'
+            clsPage: 'ui-modal-page',
+            selPanel: '.ui-modal-dialog',
+            selClose: '.ui-modal-close, .ui-modal-close-default, .ui-modal-close-outside, .ui-modal-close-full'
         },
 
         events: [
@@ -6419,8 +6419,8 @@
 
                 handler: function() {
 
-                    if (hasClass(this.panel, 'uk-margin-auto-vertical')) {
-                        addClass(this.$el, 'uk-flex');
+                    if (hasClass(this.panel, 'ui-margin-auto-vertical')) {
+                        addClass(this.$el, 'ui-flex');
                     } else {
                         css(this.$el, 'display', 'block');
                     }
@@ -6437,7 +6437,7 @@
                 handler: function() {
 
                     css(this.$el, 'display', '');
-                    removeClass(this.$el, 'uk-flex');
+                    removeClass(this.$el, 'ui-flex');
 
                 }
             }
@@ -6450,7 +6450,7 @@
 
         UIkit.modal.dialog = function (content, options) {
 
-            var dialog = UIkit.modal((" <div class=\"uk-modal\"> <div class=\"uk-modal-dialog\">" + content + "</div> </div> "), options);
+            var dialog = UIkit.modal((" <div class=\"ui-modal\"> <div class=\"ui-modal-dialog\">" + content + "</div> </div> "), options);
 
             dialog.show();
 
@@ -6471,7 +6471,7 @@
             options = assign({bgClose: false, escClose: false, labels: UIkit.modal.labels}, options);
 
             return new Promise(
-                function (resolve) { return on(UIkit.modal.dialog((" <div class=\"uk-modal-body\">" + (isString(message) ? message : html(message)) + "</div> <div class=\"uk-modal-footer uk-text-right\"> <button class=\"uk-button uk-button-primary uk-modal-close\" autofocus>" + (options.labels.ok) + "</button> </div> "), options).$el, 'hide', resolve); }
+                function (resolve) { return on(UIkit.modal.dialog((" <div class=\"ui-modal-body\">" + (isString(message) ? message : html(message)) + "</div> <div class=\"ui-modal-footer ui-text-right\"> <button class=\"ui-button ui-button-primary ui-modal-close\" autofocus>" + (options.labels.ok) + "</button> </div> "), options).$el, 'hide', resolve); }
             );
         };
 
@@ -6481,7 +6481,7 @@
 
             return new Promise(function (resolve, reject) {
 
-                var confirm = UIkit.modal.dialog((" <form> <div class=\"uk-modal-body\">" + (isString(message) ? message : html(message)) + "</div> <div class=\"uk-modal-footer uk-text-right\"> <button class=\"uk-button uk-button-default uk-modal-close\" type=\"button\">" + (options.labels.cancel) + "</button> <button class=\"uk-button uk-button-primary\" autofocus>" + (options.labels.ok) + "</button> </div> </form> "), options);
+                var confirm = UIkit.modal.dialog((" <form> <div class=\"ui-modal-body\">" + (isString(message) ? message : html(message)) + "</div> <div class=\"ui-modal-footer ui-text-right\"> <button class=\"ui-button ui-button-default ui-modal-close\" type=\"button\">" + (options.labels.cancel) + "</button> <button class=\"ui-button ui-button-primary\" autofocus>" + (options.labels.ok) + "</button> </div> </form> "), options);
 
                 var resolved = false;
 
@@ -6506,7 +6506,7 @@
 
             return new Promise(function (resolve) {
 
-                var prompt = UIkit.modal.dialog((" <form class=\"uk-form-stacked\"> <div class=\"uk-modal-body\"> <label>" + (isString(message) ? message : html(message)) + "</label> <input class=\"uk-input\" autofocus> </div> <div class=\"uk-modal-footer uk-text-right\"> <button class=\"uk-button uk-button-default uk-modal-close\" type=\"button\">" + (options.labels.cancel) + "</button> <button class=\"uk-button uk-button-primary\">" + (options.labels.ok) + "</button> </div> </form> "), options),
+                var prompt = UIkit.modal.dialog((" <form class=\"ui-form-stacked\"> <div class=\"ui-modal-body\"> <label>" + (isString(message) ? message : html(message)) + "</label> <input class=\"ui-input\" autofocus> </div> <div class=\"ui-modal-footer ui-text-right\"> <button class=\"ui-button ui-button-default ui-modal-close\" type=\"button\">" + (options.labels.cancel) + "</button> <button class=\"ui-button ui-button-primary\">" + (options.labels.ok) + "</button> </div> </form> "), options),
                     input = $('input', prompt.$el);
 
                 input.value = value;
@@ -6540,7 +6540,7 @@
         extends: Accordion,
 
         data: {
-            targets: '> .uk-parent',
+            targets: '> .ui-parent',
             toggle: '> a',
             content: '> ul'
         }
@@ -6568,9 +6568,9 @@
         },
 
         data: {
-            dropdown: '.uk-navbar-nav > li',
+            dropdown: '.ui-navbar-nav > li',
             align: !isRtl ? 'left' : 'right',
-            clsDrop: 'uk-navbar-dropdown',
+            clsDrop: 'ui-navbar-dropdown',
             mode: undefined,
             offset: undefined,
             delayShow: undefined,
@@ -6583,7 +6583,7 @@
             dropbarAnchor: false,
             duration: 200,
             forceHeight: true,
-            selMinHeight: '.uk-navbar-nav > li > a, .uk-navbar-item, .uk-navbar-toggle'
+            selMinHeight: '.ui-navbar-nav > li > a, .ui-navbar-item, .ui-navbar-toggle'
         },
 
         computed: {
@@ -6621,14 +6621,14 @@
             var ref = this.$props;
             var dropbar = ref.dropbar;
 
-            this.dropbar = dropbar && (query(dropbar, this.$el) || $('+ .uk-navbar-dropbar', this.$el) || $('<div></div>'));
+            this.dropbar = dropbar && (query(dropbar, this.$el) || $('+ .ui-navbar-dropbar', this.$el) || $('<div></div>'));
 
             if (this.dropbar) {
 
-                addClass(this.dropbar, 'uk-navbar-dropbar');
+                addClass(this.dropbar, 'ui-navbar-dropbar');
 
                 if (this.dropbarMode === 'slide') {
-                    addClass(this.dropbar, 'uk-navbar-dropbar-slide');
+                    addClass(this.dropbar, 'ui-navbar-dropbar-slide');
                 }
             }
 
@@ -6824,15 +6824,15 @@
             mode: 'slide',
             flip: false,
             overlay: false,
-            clsPage: 'uk-offcanvas-page',
-            clsContainer: 'uk-offcanvas-container',
-            selPanel: '.uk-offcanvas-bar',
-            clsFlip: 'uk-offcanvas-flip',
-            clsContainerAnimation: 'uk-offcanvas-container-animation',
-            clsSidebarAnimation: 'uk-offcanvas-bar-animation',
-            clsMode: 'uk-offcanvas',
-            clsOverlay: 'uk-offcanvas-overlay',
-            selClose: '.uk-offcanvas-close'
+            clsPage: 'ui-offcanvas-page',
+            clsContainer: 'ui-offcanvas-container',
+            selPanel: '.ui-offcanvas-bar',
+            clsFlip: 'ui-offcanvas-flip',
+            clsContainerAnimation: 'ui-offcanvas-container-animation',
+            clsSidebarAnimation: 'ui-offcanvas-bar-animation',
+            clsMode: 'ui-offcanvas',
+            clsOverlay: 'ui-offcanvas-overlay',
+            selClose: '.ui-offcanvas-close'
         },
 
         computed: {
@@ -7071,8 +7071,8 @@
         },
 
         data: {
-            selContainer: '.uk-modal',
-            selContent: '.uk-modal-dialog',
+            selContainer: '.ui-modal',
+            selContent: '.ui-modal-dialog',
         },
 
         computed: {
@@ -7130,7 +7130,7 @@
         props: ['width', 'height'],
 
         connected: function() {
-            addClass(this.$el, 'uk-responsive-width');
+            addClass(this.$el, 'ui-responsive-width');
         },
 
         update: {
@@ -7251,7 +7251,7 @@
             offsetLeft: 0,
             repeat: false,
             delay: 0,
-            inViewClass: 'uk-scrollspy-inview'
+            inViewClass: 'ui-scrollspy-inview'
         }); },
 
         computed: {
@@ -7291,7 +7291,7 @@
                         var elData = els[i];
 
                         if (!elData || elData.el !== el) {
-                            var cls = data(el, 'uk-scrollspy-class');
+                            var cls = data(el, 'ui-scrollspy-class');
                             elData = {el: el, toggles: cls && cls.split(',') || this$1.cls};
                         }
 
@@ -7404,7 +7404,7 @@
         },
 
         data: {
-            cls: 'uk-active',
+            cls: 'ui-active',
             closest: false,
             scroll: false,
             overflow: true,
@@ -7526,10 +7526,10 @@
             bottom: false,
             offset: 0,
             animation: '',
-            clsActive: 'uk-active',
+            clsActive: 'ui-active',
             clsInactive: '',
-            clsFixed: 'uk-sticky-fixed',
-            clsBelow: 'uk-sticky-below',
+            clsFixed: 'ui-sticky-fixed',
+            clsBelow: 'ui-sticky-below',
             selTarget: '',
             widthElement: false,
             showOnUp: false,
@@ -7571,7 +7571,7 @@
         },
 
         connected: function() {
-            this.placeholder = $('+ .uk-sticky-placeholder', this.$el) || $('<div class="uk-sticky-placeholder"></div>');
+            this.placeholder = $('+ .ui-sticky-placeholder', this.$el) || $('<div class="ui-sticky-placeholder"></div>');
             this.isFixed = false;
             this.isActive = false;
         },
@@ -7866,13 +7866,13 @@
         },
 
         data: {
-            connect: '~.uk-switcher',
+            connect: '~.ui-switcher',
             toggle: '> * > :first-child',
             active: 0,
             swiping: true,
-            cls: 'uk-active',
-            clsContainer: 'uk-switcher',
-            attrItem: 'uk-switcher-item',
+            cls: 'ui-active',
+            clsContainer: 'ui-switcher',
+            attrItem: 'ui-switcher-item',
             queued: true
         },
 
@@ -7899,7 +7899,7 @@
                 name: 'click',
 
                 delegate: function() {
-                    return ((this.toggle) + ":not(.uk-disabled)");
+                    return ((this.toggle) + ":not(.ui-disabled)");
                 },
 
                 handler: function(e) {
@@ -7982,7 +7982,7 @@
                 var toggle, active, next = getIndex(item, children, prev);
 
                 for (var i = 0; i < length; i++, next = (next + dir + length) % length) {
-                    if (!matches(this.toggles[next], '.uk-disabled *, .uk-disabled, [disabled]')) {
+                    if (!matches(this.toggles[next], '.ui-disabled *, .ui-disabled, [disabled]')) {
                         toggle = this.toggles[next];
                         active = children[next];
                         break;
@@ -8024,15 +8024,15 @@
 
         data: {
             media: 960,
-            attrItem: 'uk-tab-item'
+            attrItem: 'ui-tab-item'
         },
 
         connected: function() {
 
-            var cls = hasClass(this.$el, 'uk-tab-left')
-                ? 'uk-tab-left'
-                : hasClass(this.$el, 'uk-tab-right')
-                    ? 'uk-tab-right'
+            var cls = hasClass(this.$el, 'ui-tab-left')
+                ? 'ui-tab-left'
+                : hasClass(this.$el, 'ui-tab-right')
+                    ? 'ui-tab-right'
                     : false;
 
             if (cls) {
@@ -8225,7 +8225,7 @@
 
         data: {
             date: '',
-            clsWrapper: '.uk-countdown-%unit%'
+            clsWrapper: '.ui-countdown-%unit%'
         },
 
         computed: {
@@ -8382,7 +8382,7 @@
         };
     }
 
-    var targetClass = 'uk-animation-target';
+    var targetClass = 'ui-animation-target';
 
     var Animate = {
 
@@ -8545,8 +8545,8 @@
         data: {
             target: null,
             selActive: false,
-            attrItem: 'uk-filter-control',
-            cls: 'uk-active',
+            attrItem: 'ui-filter-control',
+            cls: 'ui-active',
             animation: 250
         },
 
@@ -9316,7 +9316,7 @@
                     html(this.nav, this.slides.map(function (_, i) { return ("<li " + (this$1.attrItem) + "=\"" + i + "\"><a href=\"#\"></a></li>"); }).join(''));
                 }
 
-                toggleClass($$(this.selNavItem, this.$el).concat(this.nav), 'uk-hidden', !this.maxIndex);
+                toggleClass($$(this.selNavItem, this.$el).concat(this.nav), 'ui-hidden', !this.maxIndex);
 
                 this.updateNav();
 
@@ -9364,7 +9364,7 @@
                     var cmd = data(el, this$1.attrItem);
 
                     toggleClass(el, this$1.clsActive, toNumber(cmd) === i);
-                    toggleClass(el, 'uk-invisible', this$1.finite && (cmd === 'previous' && i === 0 || cmd === 'next' && i >= this$1.maxIndex));
+                    toggleClass(el, 'ui-invisible', this$1.finite && (cmd === 'previous' && i === 0 || cmd === 'next' && i >= this$1.maxIndex));
                 });
 
             }
@@ -9392,7 +9392,7 @@
             index: 0,
             stack: [],
             percent: 0,
-            clsActive: 'uk-active',
+            clsActive: 'ui-active',
             clsActivated: false,
             Transitioner: false,
             transitionOptions: {}
@@ -9615,7 +9615,7 @@
 
         data: {
             animation: 'slide',
-            clsActivated: 'uk-transition-active',
+            clsActivated: 'ui-transition-active',
             Animations: Animations,
             Transitioner: Transitioner
         },
@@ -9687,15 +9687,15 @@
             videoAutoplay: false,
             delayControls: 3000,
             items: [],
-            cls: 'uk-open',
-            clsPage: 'uk-lightbox-page',
-            selList: '.uk-lightbox-items',
-            attrItem: 'uk-lightbox-item',
-            selClose: '.uk-close-large',
+            cls: 'ui-open',
+            clsPage: 'ui-lightbox-page',
+            selList: '.ui-lightbox-items',
+            attrItem: 'ui-lightbox-item',
+            selClose: '.ui-close-large',
             pauseOnHover: false,
             velocity: 2,
             Animations: Animations$1,
-            template: "<div class=\"uk-lightbox uk-overflow-hidden\"> <ul class=\"uk-lightbox-items\"></ul> <div class=\"uk-lightbox-toolbar uk-position-top uk-text-right uk-transition-slide-top uk-transition-opaque\"> <button class=\"uk-lightbox-toolbar-icon uk-close-large\" type=\"button\" uk-close></button> </div> <a class=\"uk-lightbox-button uk-position-center-left uk-position-medium uk-transition-fade\" href=\"#\" uk-slidenav-previous uk-lightbox-item=\"previous\"></a> <a class=\"uk-lightbox-button uk-position-center-right uk-position-medium uk-transition-fade\" href=\"#\" uk-slidenav-next uk-lightbox-item=\"next\"></a> <div class=\"uk-lightbox-toolbar uk-lightbox-caption uk-position-bottom uk-text-center uk-transition-slide-bottom uk-transition-opaque\"></div> </div>"
+            template: "<div class=\"ui-lightbox ui-overflow-hidden\"> <ul class=\"ui-lightbox-items\"></ul> <div class=\"ui-lightbox-toolbar ui-position-top ui-text-right ui-transition-slide-top ui-transition-opaque\"> <button class=\"ui-lightbox-toolbar-icon ui-close-large\" type=\"button\" ui-close></button> </div> <a class=\"ui-lightbox-button ui-position-center-left ui-position-medium ui-transition-fade\" href=\"#\" ui-slidenav-previous ui-lightbox-item=\"previous\"></a> <a class=\"ui-lightbox-button ui-position-center-right ui-position-medium ui-transition-fade\" href=\"#\" ui-slidenav-next ui-lightbox-item=\"next\"></a> <div class=\"ui-lightbox-toolbar ui-lightbox-caption ui-position-bottom ui-text-center ui-transition-slide-bottom ui-transition-opaque\"></div> </div>"
         }); },
 
         created: function() {
@@ -9704,7 +9704,7 @@
 
             this.$mount(append(this.container, this.template));
 
-            this.caption = $('.uk-lightbox-caption', this.$el);
+            this.caption = $('.ui-lightbox-caption', this.$el);
 
             this.items.forEach(function () { return append(this$1.list, '<li></li>'); });
 
@@ -9872,7 +9872,7 @@
                     var type = item.type;
                     var alt = item.alt;
 
-                    this.setItem(item, '<span uk-spinner></span>');
+                    this.setItem(item, '<span ui-spinner></span>');
 
                     if (!source) {
                         return;
@@ -9891,7 +9891,7 @@
                         // Video
                     } else if (type === 'video' || source.match(/\.(mp4|webm|ogv)($|\?)/i)) {
 
-                        var video = $(("<video controls playsinline" + (item.poster ? (" poster=\"" + (item.poster) + "\"") : '') + " uk-video=\"" + (this.videoAutoplay) + "\"></video>"));
+                        var video = $(("<video controls playsinline" + (item.poster ? (" poster=\"" + (item.poster) + "\"") : '') + " ui-video=\"" + (this.videoAutoplay) + "\"></video>"));
                         attr(video, 'src', source);
 
                         once(video, 'error loadedmetadata', function (type) {
@@ -9906,7 +9906,7 @@
                         // Iframe
                     } else if (type === 'iframe' || source.match(/\.(html|php)($|\?)/i)) {
 
-                        this.setItem(item, ("<iframe class=\"uk-lightbox-iframe\" src=\"" + source + "\" frameborder=\"0\" allowfullscreen></iframe>"));
+                        this.setItem(item, ("<iframe class=\"ui-lightbox-iframe\" src=\"" + source + "\" frameborder=\"0\" allowfullscreen></iframe>"));
 
                         // YouTube
                     } else if ((matches$$1 = source.match(/\/\/.*?youtube(-nocookie)?\.[a-z]+\/watch\?v=([^&\s]+)/) || source.match(/()youtu\.be\/(.*)/))) {
@@ -9994,7 +9994,7 @@
             },
 
             setError: function(item) {
-                this.setItem(item, '<span uk-icon="icon: bolt; ratio: 2"></span>');
+                this.setItem(item, '<span ui-icon="icon: bolt; ratio: 2"></span>');
             },
 
             showControls: function() {
@@ -10002,12 +10002,12 @@
                 clearTimeout(this.controlsTimer);
                 this.controlsTimer = setTimeout(this.hideControls, this.delayControls);
 
-                addClass(this.$el, 'uk-active', 'uk-transition-active');
+                addClass(this.$el, 'ui-active', 'ui-transition-active');
 
             },
 
             hideControls: function() {
-                removeClass(this.$el, 'uk-active', 'uk-transition-active');
+                removeClass(this.$el, 'ui-active', 'ui-transition-active');
             }
 
         }
@@ -10015,7 +10015,7 @@
     };
 
     function getIframe(src, width$$1, height$$1, autoplay) {
-        return ("<iframe src=\"" + src + "\" width=\"" + width$$1 + "\" height=\"" + height$$1 + "\" style=\"max-width: 100%; box-sizing: border-box;\" frameborder=\"0\" allowfullscreen uk-video=\"autoplay: " + autoplay + "\" uk-responsive></iframe>");
+        return ("<iframe src=\"" + src + "\" width=\"" + width$$1 + "\" height=\"" + height$$1 + "\" style=\"max-width: 100%; box-sizing: border-box;\" frameborder=\"0\" allowfullscreen ui-video=\"autoplay: " + autoplay + "\" ui-responsive></iframe>");
     }
 
     var Lightbox = {
@@ -10055,7 +10055,7 @@
                 name: 'click',
 
                 delegate: function() {
-                    return ((this.toggle) + ":not(.uk-disabled)");
+                    return ((this.toggle) + ":not(.ui-disabled)");
                 },
 
                 handler: function(e) {
@@ -10126,8 +10126,8 @@
             timeout: 5000,
             group: null,
             pos: 'top-center',
-            clsClose: 'uk-notification-close',
-            clsMsg: 'uk-notification-message'
+            clsClose: 'ui-notification-close',
+            clsMsg: 'ui-notification-message'
         },
 
         install: install$3,
@@ -10151,13 +10151,13 @@
         created: function() {
 
             if (!containers[this.pos]) {
-                containers[this.pos] = append(this.$container, ("<div class=\"uk-notification uk-notification-" + (this.pos) + "\"></div>"));
+                containers[this.pos] = append(this.$container, ("<div class=\"ui-notification ui-notification-" + (this.pos) + "\"></div>"));
             }
 
             var container = css(containers[this.pos], 'display', 'block');
 
             this.$mount(append(container,
-                ("<div class=\"" + (this.clsMsg) + (this.status ? (" " + (this.clsMsg) + "-" + (this.status)) : '') + "\"> <a href=\"#\" class=\"" + (this.clsClose) + "\" data-uk-close></a> <div>" + (this.message) + "</div> </div>")
+                ("<div class=\"" + (this.clsMsg) + (this.status ? (" " + (this.clsMsg) + "-" + (this.status)) : '') + "\"> <a href=\"#\" class=\"" + (this.clsClose) + "\" data-ui-close></a> <div>" + (this.message) + "</div> </div>")
             ));
 
         },
@@ -10871,10 +10871,10 @@
         data: {
             center: false,
             sets: false,
-            attrItem: 'uk-slider-item',
-            selList: '.uk-slider-items',
-            selNav: '.uk-slider-nav',
-            clsContainer: 'uk-slider-container',
+            attrItem: 'ui-slider-item',
+            selList: '.ui-slider-items',
+            selNav: '.ui-slider-nav',
+            clsContainer: 'ui-slider-container',
             Transitioner: Transitioner$1
         },
 
@@ -10982,7 +10982,7 @@
 
                 $$(("[" + (this.attrItem) + "],[data-" + (this.attrItem) + "]"), this.$el).forEach(function (el) {
                     var index$$1 = data(el, this$1.attrItem);
-                    this$1.maxIndex && toggleClass(el, 'uk-hidden', isNumeric(index$$1) && (this$1.sets && !includes(this$1.sets, toFloat(index$$1)) || index$$1 > this$1.maxIndex));
+                    this$1.maxIndex && toggleClass(el, 'ui-hidden', isNumeric(index$$1) && (this$1.sets && !includes(this$1.sets, toFloat(index$$1)) || index$$1 > this$1.maxIndex));
                 });
 
             },
@@ -11360,9 +11360,9 @@
             ratio: '16:9',
             minHeight: false,
             maxHeight: false,
-            selList: '.uk-slideshow-items',
-            attrItem: 'uk-slideshow-item',
-            selNav: '.uk-slideshow-nav',
+            selList: '.ui-slideshow-items',
+            attrItem: 'ui-slideshow-item',
+            selNav: '.ui-slideshow-nav',
             Animations: Animations$2
         },
 
@@ -11420,13 +11420,13 @@
         data: {
             group: false,
             threshold: 5,
-            clsItem: 'uk-sortable-item',
-            clsPlaceholder: 'uk-sortable-placeholder',
-            clsDrag: 'uk-sortable-drag',
-            clsDragState: 'uk-drag',
-            clsBase: 'uk-sortable',
-            clsNoDrag: 'uk-sortable-nodrag',
-            clsEmpty: 'uk-sortable-empty',
+            clsItem: 'ui-sortable-item',
+            clsPlaceholder: 'ui-sortable-placeholder',
+            clsDrag: 'ui-sortable-drag',
+            clsDragState: 'ui-drag',
+            clsBase: 'ui-sortable',
+            clsNoDrag: 'ui-sortable-nodrag',
+            clsEmpty: 'ui-sortable-empty',
             clsCustom: '',
             handle: false
         },
@@ -11534,7 +11534,7 @@
                     width: this.placeholder.offsetWidth,
                     height: this.placeholder.offsetHeight
                 }, css(this.placeholder, ['paddingLeft', 'paddingRight', 'paddingTop', 'paddingBottom'])));
-                attr(this.drag, 'uk-no-boot', '');
+                attr(this.drag, 'ui-no-boot', '');
                 addClass(this.drag, this.clsDrag, this.clsCustom);
 
                 height(this.drag.firstElementChild, height(this.placeholder.firstElementChild));
@@ -11715,10 +11715,10 @@
             pos: 'top',
             title: '',
             delay: 0,
-            animation: ['uk-animation-scale-up'],
+            animation: ['ui-animation-scale-up'],
             duration: 100,
-            cls: 'uk-active',
-            clsPos: 'uk-tooltip'
+            cls: 'ui-active',
+            clsPos: 'ui-tooltip'
         },
 
         beforeConnect: function() {
@@ -11830,7 +11830,7 @@
 
         data: {
             allow: false,
-            clsDragover: 'uk-dragover',
+            clsDragover: 'ui-dragover',
             concurrent: 1,
             maxSize: 0,
             method: 'POST',

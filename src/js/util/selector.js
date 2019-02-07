@@ -66,7 +66,7 @@ function _query(selector, context = document, queryFn) {
             }
 
             if (!ctx.id) {
-                ctx.id = `uk-${Date.now()}${i}`;
+                ctx.id = `ui-${Date.now()}${i}`;
                 removes.push(() => removeAttr(ctx, 'id'));
             }
 

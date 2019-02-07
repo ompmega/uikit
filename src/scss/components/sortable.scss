@@ -1,15 +1,15 @@
 // Name:            Sortable
 // Description:     Component to create sortable grids and lists
 //
-// Component:       `uk-sortable`
+// Component:       `ui-sortable`
 //
-// Sub-objects:     `uk-sortable-drag`
-//                  `uk-sortable-placeholder`
-//                  `uk-sortable-handle`
+// Sub-objects:     `ui-sortable-drag`
+//                  `ui-sortable-placeholder`
+//                  `ui-sortable-handle`
 //
-// Modifiers:       `uk-sortable-empty`
+// Modifiers:       `ui-sortable-empty`
 //
-// States:          `uk-drag`
+// States:          `ui-drag`
 //
 // ========================================================================
 
@@ -28,7 +28,7 @@ $sortable-empty-height:                          50px !default;
    Component: Sortable
  ========================================================================== */
 
-.uk-sortable {
+.ui-sortable {
     position: relative;
     @if(mixin-exists(hook-sortable)) {@include hook-sortable();}
 }
@@ -37,19 +37,19 @@ $sortable-empty-height:                          50px !default;
  * Deactivate pointer-events on SVGs in Safari
  */
 
-.uk-sortable svg { pointer-events: none; }
+.ui-sortable svg { pointer-events: none; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-sortable > :last-child { margin-bottom: 0; }
+.ui-sortable > :last-child { margin-bottom: 0; }
 
 
 /* Drag
  ========================================================================== */
 
-.uk-sortable-drag {
+.ui-sortable-drag {
     position: absolute !important;
     z-index: $sortable-dragged-z-index !important;
     pointer-events: none;
@@ -60,7 +60,7 @@ $sortable-empty-height:                          50px !default;
 /* Placeholder
  ========================================================================== */
 
-.uk-sortable-placeholder {
+.ui-sortable-placeholder {
     opacity: $sortable-placeholder-opacity;
     @if(mixin-exists(hook-sortable-placeholder)) {@include hook-sortable-placeholder();}
 }
@@ -69,7 +69,7 @@ $sortable-empty-height:                          50px !default;
 /* Empty modifier
  ========================================================================== */
 
-.uk-sortable-empty {
+.ui-sortable-empty {
     min-height: $sortable-empty-height;
     @if(mixin-exists(hook-sortable-empty)) {@include hook-sortable-empty();}
 }
@@ -79,7 +79,7 @@ $sortable-empty-height:                          50px !default;
  ========================================================================== */
 
 /* Hover */
-.uk-sortable-handle:hover { cursor: move; }
+.ui-sortable-handle:hover { cursor: move; }
 
 
 

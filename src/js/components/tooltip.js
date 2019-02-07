@@ -20,10 +20,10 @@ export default {
         pos: 'top',
         title: '',
         delay: 0,
-        animation: ['uk-animation-scale-up'],
+        animation: ['ui-animation-scale-up'],
         duration: 100,
-        cls: 'uk-active',
-        clsPos: 'uk-tooltip'
+        cls: 'ui-active',
+        clsPos: 'ui-tooltip'
     },
 
     beforeConnect() {

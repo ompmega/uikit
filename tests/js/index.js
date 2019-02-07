@@ -58,8 +58,8 @@ on(window, 'load', () => setTimeout(() => fastdom.write(() => {
 
     const $body = document.body;
     const $container = prepend($body, `
-        <div class="uk-container">
-            <select class="uk-select uk-form-width-small" style="margin: 20px 20px 20px 0">
+        <div class="ui-container">
+            <select class="ui-select ui-form-width-small" style="margin: 20px 20px 20px 0">
                 <option value="index.html">Overview</option>
                 ${[
                     'accordion',
@@ -146,14 +146,14 @@ on(window, 'load', () => setTimeout(() => fastdom.write(() => {
                     'width'
                 ].sort().map(name => `<option value="${name}.html">${name.split('-').map(ucfirst).join(' ')}</option>`).join('')}
             </select>
-            <select class="uk-select uk-form-width-small" style="margin: 20px">
+            <select class="ui-select ui-form-width-small" style="margin: 20px">
                 ${Object.keys(styles).map(style => `<option value="${style}">${ucfirst(style)}</option>`).join('')}
             </select>
-            <select class="uk-select uk-form-width-small" style="margin: 20px">
+            <select class="ui-select ui-form-width-small" style="margin: 20px">
                 ${Object.keys(variations).map(name => `<option value="${name}">${variations[name]}</option>`).join('')}        
             </select>
             <label style="margin: 20px">
-                <input type="checkbox" class="uk-checkbox"/>
+                <input type="checkbox" class="ui-checkbox"/>
                 <span style="margin: 5px">RTL</span>
             </label>
         </div>
@@ -188,25 +188,25 @@ on(window, 'load', () => setTimeout(() => fastdom.write(() => {
     if ($inverse.value) {
 
         removeClass(document.querySelectorAll('*'), [
-            'uk-navbar-container',
-            'uk-card-default',
-            'uk-card-muted',
-            'uk-card-primary',
-            'uk-card-secondary',
-            'uk-tile-default',
-            'uk-tile-muted',
-            'uk-tile-primary',
-            'uk-tile-secondary',
-            'uk-section-default',
-            'uk-section-muted',
-            'uk-section-primary',
-            'uk-section-secondary',
-            'uk-overlay-default',
-            'uk-overlay-primary'
+            'ui-navbar-container',
+            'ui-card-default',
+            'ui-card-muted',
+            'ui-card-primary',
+            'ui-card-secondary',
+            'ui-tile-default',
+            'ui-tile-muted',
+            'ui-tile-primary',
+            'ui-tile-secondary',
+            'ui-section-default',
+            'ui-section-muted',
+            'ui-section-primary',
+            'ui-section-secondary',
+            'ui-overlay-default',
+            'ui-overlay-primary'
         ]);
 
         css(docEl, 'background', $inverse.value === 'dark' ? '#fff' : '#222');
-        addClass($body, `uk-${$inverse.value}`);
+        addClass($body, `ui-${$inverse.value}`);
 
     }
 

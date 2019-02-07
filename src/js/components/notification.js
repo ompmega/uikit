@@ -14,8 +14,8 @@ export default {
         timeout: 5000,
         group: null,
         pos: 'top-center',
-        clsClose: 'uk-notification-close',
-        clsMsg: 'uk-notification-message'
+        clsClose: 'ui-notification-close',
+        clsMsg: 'ui-notification-message'
     },
 
     install,
@@ -35,14 +35,14 @@ export default {
     created() {
 
         if (!containers[this.pos]) {
-            containers[this.pos] = append(this.$container, `<div class="uk-notification uk-notification-${this.pos}"></div>`);
+            containers[this.pos] = append(this.$container, `<div class="ui-notification ui-notification-${this.pos}"></div>`);
         }
 
         const container = css(containers[this.pos], 'display', 'block');
 
         this.$mount(append(container,
             `<div class="${this.clsMsg}${this.status ? ` ${this.clsMsg}-${this.status}` : ''}">
-                    <a href="#" class="${this.clsClose}" data-uk-close></a>
+                    <a href="#" class="${this.clsClose}" data-ui-close></a>
                     <div>${this.message}</div>
                 </div>`
         ));

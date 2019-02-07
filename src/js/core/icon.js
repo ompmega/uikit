@@ -55,7 +55,7 @@ const Icon = {
     isIcon: true,
 
     connected() {
-        addClass(this.$el, 'uk-icon');
+        addClass(this.$el, 'ui-icon');
     },
 
     methods: {
@@ -92,13 +92,13 @@ export const Slidenav = {
     extends: IconComponent,
 
     connected() {
-        addClass(this.$el, 'uk-slidenav');
+        addClass(this.$el, 'ui-slidenav');
     },
 
     computed: {
 
         icon({icon}, $el) {
-            return hasClass($el, 'uk-slidenav-large')
+            return hasClass($el, 'ui-slidenav-large')
                 ? `${icon}-large`
                 : icon;
         }
@@ -114,9 +114,9 @@ export const Search = {
     computed: {
 
         icon({icon}, $el) {
-            return hasClass($el, 'uk-search-icon') && parents($el, '.uk-search-large').length
+            return hasClass($el, 'ui-search-icon') && parents($el, '.ui-search-large').length
                 ? 'search-large'
-                : parents($el, '.uk-search-navbar').length
+                : parents($el, '.ui-search-navbar').length
                     ? 'search-navbar'
                     : icon;
         }
@@ -132,7 +132,7 @@ export const Close = {
     computed: {
 
         icon() {
-            return `close-${hasClass(this.$el, 'uk-close-large') ? 'large' : 'icon'}`;
+            return `close-${hasClass(this.$el, 'ui-close-large') ? 'large' : 'icon'}`;
         }
 
     }

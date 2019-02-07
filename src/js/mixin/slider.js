@@ -22,7 +22,7 @@ export default {
         index: 0,
         stack: [],
         percent: 0,
-        clsActive: 'uk-active',
+        clsActive: 'ui-active',
         clsActivated: false,
         Transitioner: false,
         transitionOptions: {}
